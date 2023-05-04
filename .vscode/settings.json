@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "math.h": "c",
+        "time.h": "c",
+        "bullet.h": "c",
+        "mlv_all.h": "c",
+        "game.h": "c",
+        "ship.h": "c",
+        "stdlib.h": "c"
+    }
+}
