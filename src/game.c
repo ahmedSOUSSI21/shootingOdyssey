@@ -347,5 +347,7 @@ void gameloop(){
     free_ship(player_ship);
     MLV_free_image(player_image);
     MLV_free_image(enemy_image);
+    MLV_free_image(enemy_image2);
+    MLV_free_image(enemy_image_);
     MLV_free_window();
 }
