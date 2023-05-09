@@ -11,7 +11,6 @@
 
 
 int main(int argc, char * argv[]){
-    //pipi prout
     gameloop();    
     return 0;
 }
