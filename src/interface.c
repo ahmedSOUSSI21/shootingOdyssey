@@ -45,6 +45,7 @@ void add_bullet(BulletWithImage ** bullets, Bullet * bullet){
     }
 }
 
+//fonction qui permet de supprimer les bullets qui sont hors de l'écran
 void remove_out_screen_bullets(BulletWithImage ** bullets){
     int i;
     for(i = 0; i < MAX_BULLETS; i++){
@@ -57,11 +58,13 @@ void remove_out_screen_bullets(BulletWithImage ** bullets){
     }
 }
 
+//fonction qui permet de supprimer une bullet
 void remove_bullet(BulletWithImage ** bullets, int index){
     free_bullet_with_image(bullets[index]);
     bullets[index] = NULL;
 }
 
+//fonction qui permet d'afficher les bullets
 void display_bullets(BulletWithImage ** bullets){
     int i;
     for(i = 0; i < MAX_BULLETS; i++){
@@ -71,10 +74,12 @@ void display_bullets(BulletWithImage ** bullets){
     }
 }
 
+//fonction qui permet d'afficher le vaisseau
 void display_ship(Ship * ship, MLV_Image * image){
     MLV_draw_image(image, ship->x, ship->y);
 }
 
+//fonction qui permet d'afficher le score
 void display_pv_ammo(Ship * ship){
     MLV_draw_rectangle(2, 2, 100, 10, MLV_COLOR_RED);
     MLV_draw_filled_rectangle(2, 2, ship->pv, 10, MLV_COLOR_GREEN);
@@ -82,6 +87,7 @@ void display_pv_ammo(Ship * ship){
     MLV_draw_filled_rectangle(2, 13, ship->ammo, 10, MLV_COLOR_BLUE);
 }
 
+//fonction qui permet d'afficher la map
 void display_map(ImageWithPosition ** small_stars, ImageWithPosition ** big_stars, ImageWithPosition * moon){
     int i;
     for(i = 0; i < 6; i++){
@@ -110,6 +116,7 @@ void display_map(ImageWithPosition ** small_stars, ImageWithPosition ** big_star
     }
 }
 
+//fonction qui permet d'initialiser la map
 void init_map(ImageWithPosition ** small_stars, ImageWithPosition ** big_stars, ImageWithPosition ** moon){
     int count = 0;
     small_stars[count] = init_image_with_position("./data/images/small_stars.png",0 ,-STAR_IMAGE_HEIGHT, 1);
@@ -128,20 +135,11 @@ void init_map(ImageWithPosition ** small_stars, ImageWithPosition ** big_stars, 
     *moon = init_image_with_position("./data/images/moon.png", 200, 10, 3);
 }
 
+//fonction qui permet de liberer la memoire allouer pour la map
 void free_map(ImageWithPosition ** small_stars, ImageWithPosition ** big_stars, ImageWithPosition ** moon){
     for(int i = 0; i < 6; i++){
         free_image_with_position(small_stars[i]);
         free_image_with_position(big_stars[i]);
     }
     free_image_with_position(*moon);
-}
-
-//fonction qui permet de savoir si un vaisseau est en collision avec un autre vaisseau
-int is_ship_collide(Ship * ship, Ship * ship2){
-    if(ship->x + SHIP_IMAGE_WIDTH >= ship2->x && ship->x <= ship2->x + SHIP_IMAGE_WIDTH){
-        if(ship->y + SHIP_IMAGE_HEIGHT >= ship2->y && ship->y <= ship2->y + SHIP_IMAGE_HEIGHT){
-            return 1;
-        }
-    }
-    return 0;
 }
