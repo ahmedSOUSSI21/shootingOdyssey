@@ -135,3 +135,13 @@ void free_map(ImageWithPosition ** small_stars, ImageWithPosition ** big_stars, 
     }
     free_image_with_position(*moon);
 }
+
+//fonction qui permet de savoir si un vaisseau est en collision avec un autre vaisseau
+int is_ship_collide(Ship * ship, Ship * ship2){
+    if(ship->x + SHIP_IMAGE_WIDTH >= ship2->x && ship->x <= ship2->x + SHIP_IMAGE_WIDTH){
+        if(ship->y + SHIP_IMAGE_HEIGHT >= ship2->y && ship->y <= ship2->y + SHIP_IMAGE_HEIGHT){
+            return 1;
+        }
+    }
+    return 0;
+}
