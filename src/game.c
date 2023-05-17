@@ -8,11 +8,13 @@
 #include "../include/interface.h"
 #include "../include/game.h"
 #include "../include/animations.h"
+
 #define MAX_ANIMATIONS 2048
 #define MAX_ENEMY_SHIPS 100
 
 void move_bullets(BulletWithImage ** bullets){
     int i;
+
     for(i = 0; i < MAX_BULLETS; i++){
         if(bullets[i] != NULL) move_bullet(bullets[i]->bullet);
     }
@@ -20,6 +22,7 @@ void move_bullets(BulletWithImage ** bullets){
 
 void free_bullets(BulletWithImage ** bullets){
     int i;
+
     for(i = 0; i < MAX_BULLETS; i++){
         if(bullets[i] != NULL) free_bullet_with_image(bullets[i]);
     }
@@ -27,6 +30,7 @@ void free_bullets(BulletWithImage ** bullets){
 
 void display_animations(Animation ** animations, float timeDelta){
     int i;
+
     for(i = 0; i < MAX_ANIMATIONS; i++){
         if(animations[i] != NULL){
             if(animations[i]->wait > animations[i]->last_time){
@@ -52,6 +56,7 @@ void display_animations(Animation ** animations, float timeDelta){
 
 void free_all_animations(Animation ** animations){
     int i;
+
     for(i = 0; i < MAX_ANIMATIONS; i++){
         if(animations[i] != NULL){
             free_animation(animations[i]);
@@ -62,6 +67,7 @@ void free_all_animations(Animation ** animations){
 
 void add_animation(Animation ** animations, Animation * animation){
     int i;
+
     for(i = 0; i < MAX_ANIMATIONS; i++){
         if(animations[i] == NULL){
             animations[i] = animation;
@@ -72,10 +78,13 @@ void add_animation(Animation ** animations, Animation * animation){
 
 void enemy_collision(BulletWithImage ** bullets, Ship ** enemy_ships, Animation ** animations){
     int i, j;
+
     for(i = 0; i < MAX_BULLETS; i++){
+
         if(bullets[i]!= NULL){
             if(bullets[i]->bullet->type == PLAYER_BULLET_TYPE){
                 for(j = 0; j < MAX_ENEMY_SHIPS; j++){
+
                     if(enemy_ships[j] != NULL && bullets[i] != NULL){
                         if(bullets[i]->bullet->x >= enemy_ships[j]->x && bullets[i]->bullet->x < (enemy_ships[j]->x + SHIP_WIDTH) 
                         && bullets[i]->bullet->y >= enemy_ships[j]->y && bullets[i]->bullet->y < (enemy_ships[j]->y + SHIP_HEIGHT)){
@@ -96,6 +105,7 @@ void enemy_collision(BulletWithImage ** bullets, Ship ** enemy_ships, Animation 
 
 void player_collision(BulletWithImage ** bullets, Ship * player_ship, Animation ** animations){
     int i;
+
     for(i = 0; i < MAX_BULLETS; i++){
         if(bullets[i]!= NULL){
             if(bullets[i]->bullet->type != PLAYER_BULLET_TYPE){
@@ -112,6 +122,7 @@ void player_collision(BulletWithImage ** bullets, Ship * player_ship, Animation 
 
 void add_all_deltaTime(Ship ** enemy_ships, float deltaTime){
     int j;
+
     for(j = 0; j < MAX_ENEMY_SHIPS; j++){
         if(enemy_ships[j] != NULL){
             enemy_ships[j]->last_fire += deltaTime;
@@ -121,6 +132,7 @@ void add_all_deltaTime(Ship ** enemy_ships, float deltaTime){
 
 void add_enemy(Ship ** enemy_ships, Ship * new_enemy){
     int j;
+
     for(j = 0; j < MAX_ENEMY_SHIPS; j++){
         if(enemy_ships[j] == NULL){
             enemy_ships[j] = new_enemy;
@@ -131,6 +143,7 @@ void add_enemy(Ship ** enemy_ships, Ship * new_enemy){
 
 void move_enemies(Ship ** enemy_ships, Ship * player_ship){
     int i;
+
     for(i = 0; i < MAX_ENEMY_SHIPS; i++){
         if(enemy_ships[i] != NULL){
             if(enemy_ships[i]->type == NORMAL_ENEMY_SHIP_TYPE){
@@ -158,6 +171,7 @@ void move_enemies(Ship ** enemy_ships, Ship * player_ship){
 
 void enemies_fire(Ship ** enemy_ships, Ship * player_ship, BulletWithImage ** bullets){
     int i;
+
     for(i = 0; i < MAX_ENEMY_SHIPS; i++){
         if(enemy_ships[i] != NULL){
             Bullet * tmp;
@@ -176,6 +190,7 @@ void enemies_fire(Ship ** enemy_ships, Ship * player_ship, BulletWithImage ** bu
 
 void free_all_enemies(Ship ** enemy_ships){
     int j;
+
     for(j = 0; j < MAX_ENEMY_SHIPS; j++){
         if(enemy_ships[j] != NULL){
             free_ship(enemy_ships[j]);
