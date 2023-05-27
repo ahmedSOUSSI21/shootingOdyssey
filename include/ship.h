@@ -10,9 +10,9 @@
 #define SHIP_HEIGHT 32
 #define PI		3.14159265358979323846
 
-#define LAST_FIRE_PLAYER 0.6
-#define LAST_FIRE_ENEMY 0.8
-#define PLAYER_MINIMUM_RELOAD_TIME 5.0
+#define LAST_FIRE_PLAYER 200
+#define LAST_FIRE_ENEMY 400
+#define PLAYER_MINIMUM_RELOAD_TIME 2000
 #define PLAYER_SHIP_TYPE 1
 #define NORMAL_ENEMY_SHIP_TYPE 2
 #define FLASHING_ENEMY_SHIP_TYPE 3
@@ -119,4 +119,11 @@ Bullet * enemy_fire_normal(Ship * ship);
  */
 void take_damage_from_bullet(Ship * ship, Bullet * bullet);
 
+/**
+ * @brief 
+ * 
+ * @param ship 
+ * @param ship2 
+ */
+void damage_between_ships(Ship * ship, Ship * ship2);
 #endif

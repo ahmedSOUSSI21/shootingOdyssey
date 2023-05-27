@@ -185,3 +185,8 @@ Bullet * enemy_fire_normal(Ship * ship){
 void take_damage_from_bullet(Ship * ship, Bullet * bullet){
     ship->pv -= bullet->damage;
 }
+
+void damage_between_ships(Ship * ship, Ship * ship2){
+    ship->pv -= 10;
+    ship2->pv -= 10;
+}

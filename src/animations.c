@@ -12,8 +12,8 @@ Animation * init_explosion_animation(int x, int y){
     res->nb_images = 5;
     res->x = x;
     res->y = y;
-    res->wait = 0.1;
-    res->last_time = 0.1;
+    res->wait = 100;
+    res->last_time = 100;
 
     MLV_Image ** images = malloc(sizeof(MLV_Image *) * res->nb_images);
     images[0] = MLV_copy_partial_image(source, 0, 0, 16, 16);
@@ -36,8 +36,8 @@ Animation * init_reloading_animation(int x, int y){
     res->x = x;
     res->y = y;
 
-    res->wait = 0.6;
-    res->last_time = 0.6;
+    res->wait = 200;
+    res->last_time = 200;
 
     MLV_Image ** images = malloc(sizeof(MLV_Image * ) * res->nb_images);
     images[0] = MLV_load_image("./data/images/reload.png");

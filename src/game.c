@@ -8,6 +8,7 @@
 #include "../include/interface.h"
 #include "../include/game.h"
 #include "../include/animations.h"
+#include "../include/in_out.h"
 #define MAX_ANIMATIONS 2048
 #define MAX_ENEMY_SHIPS 100
 
@@ -94,7 +95,11 @@ void enemy_collision(BulletWithImage ** bullets, Ship ** enemy_ships, Animation 
     }
 }
 
-void player_collision(BulletWithImage ** bullets, Ship * player_ship, Animation ** animations){
+int distance(Ship * ship, Ship * ship2){
+    return sqrt(pow(ship->x - ship2->x, 2) + pow(ship->y - ship2->y, 2));
+}
+
+void player_collision(BulletWithImage ** bullets, Ship * player_ship, Ship** enemy_ships, Animation ** animations){
     int i;
     for(i = 0; i < MAX_BULLETS; i++){
         if(bullets[i]!= NULL){
@@ -104,6 +109,19 @@ void player_collision(BulletWithImage ** bullets, Ship * player_ship, Animation 
                     add_animation(animations, init_explosion_animation(bullets[i]->bullet->x, bullets[i]->bullet->y));
                     take_damage_from_bullet(player_ship, bullets[i]->bullet);
                     remove_bullet(bullets, i);
+                }
+            }
+        }
+    }
+
+    for(i = 0; i < MAX_ENEMY_SHIPS; i++){
+        if(enemy_ships[i] != NULL){
+            if(distance(player_ship, enemy_ships[i]) <= 10) {
+                add_animation(animations, init_explosion_animation(player_ship->x, player_ship->y));
+                damage_between_ships(player_ship, enemy_ships[i]);
+                if(enemy_ships[i]->pv <= 0){
+                    free_ship(enemy_ships[i]);
+                    enemy_ships[i] = NULL;
                 }
             }
         }
@@ -174,6 +192,20 @@ void enemies_fire(Ship ** enemy_ships, Ship * player_ship, BulletWithImage ** bu
     }
 }
 
+void display_all_enemies(Ship ** enemy_ships, MLV_Image * normal_image, MLV_Image * flashing_image){
+    int i;
+    for(i = 0; i < MAX_ENEMY_SHIPS; i++){
+        if(enemy_ships[i] != NULL){
+            if(enemy_ships[i]->type == FLASHING_ENEMY_SHIP_TYPE){
+                display_ship(enemy_ships[i], flashing_image);
+            }
+            else{
+                display_ship(enemy_ships[i], normal_image);
+            }
+        }
+    }
+}
+
 void free_all_enemies(Ship ** enemy_ships){
     int j;
     for(j = 0; j < MAX_ENEMY_SHIPS; j++){
@@ -205,7 +237,7 @@ void gameloop(){
     ImageWithPosition * moon = NULL;
     
     float deltaTime;
-    clock_t current_time, previous_time;
+    int current_time, previous_time;
     float reload = 0.0;
 
     struct timespec new, last;
@@ -219,9 +251,14 @@ void gameloop(){
     
     player_image = MLV_load_image("./data/images/ship.png");
     player_ship = init_player_ship(150, 600, 5);
+    
+    read_enemies("./data/files/enemies.txt", enemy_ships, MAX_ENEMY_SHIPS);
+    
+    /*
     add_enemy(enemy_ships, init_normal_enemy_ship(50, 50, 2));
     add_enemy(enemy_ships, init_normal_enemy_ship(200, 50, 2));
     add_enemy(enemy_ships, init_flashing_ship(50, -400, 2));
+    */
     enemy_image = MLV_load_image("./data/images/enemy_normal.png");
     enemy_image_ = MLV_load_image("./data/images/enemy_normal.png");
     enemy_image2 = MLV_load_image("./data/images/enemy_flashing.png");
@@ -232,9 +269,10 @@ void gameloop(){
         if(player_ship->pv <= 0) break;
 
         previous_time = current_time;
-        current_time = clock();
-        deltaTime = ((float)(current_time - previous_time) / CLOCKS_PER_SEC) * 10;
+        current_time = MLV_get_time();
+        deltaTime = (float)(current_time - previous_time);
         player_ship->last_fire += deltaTime;
+        printf("%f \n", player_ship->last_fire);fflush(stdout);
         if(player_ship->ammo <= 0){
             if(reload == 0.0){
                 add_animation(animations, init_reloading_animation(WIDTH/2, HEIGHT/2));
@@ -247,23 +285,21 @@ void gameloop(){
         }
 
         add_all_deltaTime(enemy_ships, deltaTime);
-        
         enemy_collision(bullets, enemy_ships, animations);
-        player_collision(bullets, player_ship, animations);
+        player_collision(bullets, player_ship, enemy_ships, animations);
 
         MLV_clear_window(MLV_COLOR_BLACK);
         clock_gettime(CLOCK_REALTIME, &last);
-        
+
         display_map(small_stars, big_stars, moon);
         display_ship(player_ship, player_image);
         display_pv_ammo(player_ship);
-        if(enemy_ships[0] != NULL) display_ship(enemy_ships[0], enemy_image);
-        if(enemy_ships[1] != NULL) display_ship(enemy_ships[1], enemy_image_);
-        if(enemy_ships[2] != NULL) display_ship(enemy_ships[2], enemy_image2);
+        display_all_enemies(enemy_ships, enemy_image, enemy_image2);
         display_bullets(bullets);
         display_animations(animations, deltaTime);
         
         MLV_actualise_window();
+
         MLV_Event event = MLV_get_event(&key_sym, NULL, NULL, NULL, NULL, NULL, NULL, NULL, &state);
 
         if(event == MLV_KEY){
