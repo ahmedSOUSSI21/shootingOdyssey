@@ -9,6 +9,7 @@
 #include "../include/game.h"
 #include "../include/animations.h"
 #include "../include/in_out.h"
+
 #define MAX_ANIMATIONS 2048
 #define MAX_ENEMY_SHIPS 100
 
@@ -117,7 +118,6 @@ void player_collision(BulletWithImage ** bullets, Ship * player_ship, Ship** ene
     for(i = 0; i < MAX_ENEMY_SHIPS; i++){
         if(enemy_ships[i] != NULL){
             if(distance(player_ship, enemy_ships[i]) <= 10) {
-                add_animation(animations, init_explosion_animation(player_ship->x, player_ship->y));
                 damage_between_ships(player_ship, enemy_ships[i]);
                 if(enemy_ships[i]->pv <= 0){
                     free_ship(enemy_ships[i]);
@@ -227,7 +227,6 @@ void gameloop(){
     int quit, move_left, move_right, move_up, move_down, fire_clicked;
     MLV_Image * player_image;
     MLV_Image * enemy_image;
-    MLV_Image * enemy_image_;
     MLV_Image * enemy_image2;
     MLV_Keyboard_button key_sym;
     MLV_Button_state state;
@@ -251,16 +250,8 @@ void gameloop(){
     
     player_image = MLV_load_image("./data/images/ship.png");
     player_ship = init_player_ship(150, 600, 5);
-    
     read_enemies("./data/files/enemies.txt", enemy_ships, MAX_ENEMY_SHIPS);
-    
-    /*
-    add_enemy(enemy_ships, init_normal_enemy_ship(50, 50, 2));
-    add_enemy(enemy_ships, init_normal_enemy_ship(200, 50, 2));
-    add_enemy(enemy_ships, init_flashing_ship(50, -400, 2));
-    */
     enemy_image = MLV_load_image("./data/images/enemy_normal.png");
-    enemy_image_ = MLV_load_image("./data/images/enemy_normal.png");
     enemy_image2 = MLV_load_image("./data/images/enemy_flashing.png");
 
     quit = 0;
@@ -384,6 +375,5 @@ void gameloop(){
     MLV_free_image(player_image);
     MLV_free_image(enemy_image);
     MLV_free_image(enemy_image2);
-    MLV_free_image(enemy_image_);
     MLV_free_window();
 }

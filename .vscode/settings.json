@@ -6,6 +6,7 @@
         "mlv_all.h": "c",
         "game.h": "c",
         "ship.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "animations.h": "c"
     }
 }
