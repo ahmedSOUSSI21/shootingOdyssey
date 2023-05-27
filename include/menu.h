@@ -3,4 +3,6 @@
 
 #include "interface.h"
 
+void display_menu();
+
 #endif
