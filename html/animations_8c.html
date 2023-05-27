@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shooting Odyssey: Référence du fichier src/animations.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shooting Odyssey
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier animations.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="animations_8h_source.html">../include/animations.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a7b2937e8032d77824b51d3518b58a032"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_animation.html">Animation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animations_8c.html#a7b2937e8032d77824b51d3518b58a032">init_explosion_animation</a> (int x, int y)</td></tr>
+<tr class="memdesc:a7b2937e8032d77824b51d3518b58a032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise une animation d'explosion.  <br /></td></tr>
+<tr class="separator:a7b2937e8032d77824b51d3518b58a032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac930b4a61b7855edd702ad8f230ba0f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_animation.html">Animation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animations_8c.html#ac930b4a61b7855edd702ad8f230ba0f5">init_reloading_animation</a> (int x, int y)</td></tr>
+<tr class="memdesc:ac930b4a61b7855edd702ad8f230ba0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise une animation de rechargement.  <br /></td></tr>
+<tr class="separator:ac930b4a61b7855edd702ad8f230ba0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400500a1dd3277c6a70a737596e01bbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animations_8c.html#a400500a1dd3277c6a70a737596e01bbf">free_animation</a> (<a class="el" href="struct_animation.html">Animation</a> *animation)</td></tr>
+<tr class="memdesc:a400500a1dd3277c6a70a737596e01bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">libération de la mémoire allouée pour une animation  <br /></td></tr>
+<tr class="separator:a400500a1dd3277c6a70a737596e01bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5641fa3fdcb53b1578a12b38a6fa2396"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="animations_8c.html#a5641fa3fdcb53b1578a12b38a6fa2396">display_current_frame</a> (<a class="el" href="struct_animation.html">Animation</a> *animation)</td></tr>
+<tr class="memdesc:a5641fa3fdcb53b1578a12b38a6fa2396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche l'animation courante.  <br /></td></tr>
+<tr class="separator:a5641fa3fdcb53b1578a12b38a6fa2396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a5641fa3fdcb53b1578a12b38a6fa2396" name="a5641fa3fdcb53b1578a12b38a6fa2396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5641fa3fdcb53b1578a12b38a6fa2396">&#9670;&#160;</a></span>display_current_frame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_current_frame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_animation.html">Animation</a> *&#160;</td>
+          <td class="paramname"><em>animation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche l'animation courante. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animation</td><td><a class="el" href="struct_animation.html" title="Structure représentant une animation.">Animation</a> à afficher </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a400500a1dd3277c6a70a737596e01bbf" name="a400500a1dd3277c6a70a737596e01bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a400500a1dd3277c6a70a737596e01bbf">&#9670;&#160;</a></span>free_animation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_animation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_animation.html">Animation</a> *&#160;</td>
+          <td class="paramname"><em>animation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>libération de la mémoire allouée pour une animation </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animation</td><td><a class="el" href="struct_animation.html" title="Structure représentant une animation.">Animation</a> à libérer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7b2937e8032d77824b51d3518b58a032" name="a7b2937e8032d77824b51d3518b58a032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2937e8032d77824b51d3518b58a032">&#9670;&#160;</a></span>init_explosion_animation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_animation.html">Animation</a> * init_explosion_animation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise une animation d'explosion. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Position x de l'animation </td></tr>
+    <tr><td class="paramname">y</td><td>Position y de l'animation</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="struct_animation.html" title="Structure représentant une animation.">Animation</a> * Pointeur sur l'animation initialisée </dd></dl>
+
+</div>
+</div>
+<a id="ac930b4a61b7855edd702ad8f230ba0f5" name="ac930b4a61b7855edd702ad8f230ba0f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac930b4a61b7855edd702ad8f230ba0f5">&#9670;&#160;</a></span>init_reloading_animation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_animation.html">Animation</a> * init_reloading_animation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise une animation de rechargement. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Position x de l'animation </td></tr>
+    <tr><td class="paramname">y</td><td>Position y de l'animation</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="struct_animation.html" title="Structure représentant une animation.">Animation</a> * Pointeur sur l'animation initialisée </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

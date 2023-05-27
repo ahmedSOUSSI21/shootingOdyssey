@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['take_5fdamage_5ffrom_5fbullet_0',['take_damage_from_bullet',['../ship_8h.html#ac73c82a96d7068f50aae1e51c061bca2',1,'take_damage_from_bullet(Ship *ship, Bullet *bullet):&#160;ship.c'],['../ship_8c.html#ac73c82a96d7068f50aae1e51c061bca2',1,'take_damage_from_bullet(Ship *ship, Bullet *bullet):&#160;ship.c']]]
+];

@@ -1,0 +1,818 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shooting Odyssey: Référence du fichier include/interface.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shooting Odyssey
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier interface.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="ship_8h_source.html">../include/ship.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bullet_8h_source.html">../include/bullet.h</a>&quot;</code><br />
+</div>
+<p><a href="interface_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__image__and__pos.html">_image_and_pos</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure contenant une image et sa position.  <a href="struct__image__and__pos.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__bullet__with__image.html">_bullet_with_image</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure contenant un bullet et son image.  <a href="struct__bullet__with__image.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a4331843c2698da5ccb18562eb1485681"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a4331843c2698da5ccb18562eb1485681">MAX_BULLETS</a>&#160;&#160;&#160;2048</td></tr>
+<tr class="separator:a4331843c2698da5ccb18562eb1485681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241aeeb764887ae5e3de58b98f04b16d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a241aeeb764887ae5e3de58b98f04b16d">WIDTH</a>&#160;&#160;&#160;320</td></tr>
+<tr class="separator:a241aeeb764887ae5e3de58b98f04b16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed89bd71aee8be823e8a20ec4e093c1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a>&#160;&#160;&#160;640</td></tr>
+<tr class="separator:aed89bd71aee8be823e8a20ec4e093c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ded192fef211f688d9932ef47bd813"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#af4ded192fef211f688d9932ef47bd813">STAR_IMAGE_WIDTH</a>&#160;&#160;&#160;160</td></tr>
+<tr class="separator:af4ded192fef211f688d9932ef47bd813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0c3ba2e0dbc0b63a5216224a65d7f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a1e0c3ba2e0dbc0b63a5216224a65d7f5">STAR_IMAGE_HEIGHT</a>&#160;&#160;&#160;320</td></tr>
+<tr class="separator:a1e0c3ba2e0dbc0b63a5216224a65d7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1cf7dea7f7efb8cea939b5e35856650"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#ab1cf7dea7f7efb8cea939b5e35856650">MOON_IMAGE_WIDTH</a>&#160;&#160;&#160;90</td></tr>
+<tr class="separator:ab1cf7dea7f7efb8cea939b5e35856650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abebdef4ea1e081d598ed12436761cc34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#abebdef4ea1e081d598ed12436761cc34">MOON_IMAGE_HEIGHT</a>&#160;&#160;&#160;66</td></tr>
+<tr class="separator:abebdef4ea1e081d598ed12436761cc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abca003ae312fc8f9086f19727b552f29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#abca003ae312fc8f9086f19727b552f29">HEALTH_BAR_X</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:abca003ae312fc8f9086f19727b552f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00e97aa11b6d292d04dfd40859cd8c48"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a00e97aa11b6d292d04dfd40859cd8c48">HEALTH_BAR_Y</a>&#160;&#160;&#160;(<a class="el" href="interface_8h.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a> - 43)</td></tr>
+<tr class="separator:a00e97aa11b6d292d04dfd40859cd8c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef4d1b1fa8da3062a54eab1fd422199"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a7ef4d1b1fa8da3062a54eab1fd422199">IMAGE_DIR</a>&#160;&#160;&#160;&quot;data/images/&quot;</td></tr>
+<tr class="separator:a7ef4d1b1fa8da3062a54eab1fd422199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34faf9ba46fe9868f0acce685a57fdc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a34faf9ba46fe9868f0acce685a57fdc8">SOUND_DIR</a>&#160;&#160;&#160;&quot;data/sounds/&quot;</td></tr>
+<tr class="separator:a34faf9ba46fe9868f0acce685a57fdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a612609225f24610261a52e0c94b0a659"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__image__and__pos.html">_image_and_pos</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a></td></tr>
+<tr class="separator:a612609225f24610261a52e0c94b0a659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75ed681327b5763c40051536784ccb9f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct__bullet__with__image.html">_bullet_with_image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a></td></tr>
+<tr class="separator:a75ed681327b5763c40051536784ccb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af915920bdf3f88ef36fc07407b80f62f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#af915920bdf3f88ef36fc07407b80f62f">init_image_with_position</a> (const char *image_file_name, int x, int y, int speed)</td></tr>
+<tr class="memdesc:af915920bdf3f88ef36fc07407b80f62f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise une image avec sa position.  <br /></td></tr>
+<tr class="separator:af915920bdf3f88ef36fc07407b80f62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c462565933ae5e9996532fcce0557f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a3c462565933ae5e9996532fcce0557f3">free_image_with_position</a> (<a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> *iwp)</td></tr>
+<tr class="memdesc:a3c462565933ae5e9996532fcce0557f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libère une image avec sa position.  <br /></td></tr>
+<tr class="separator:a3c462565933ae5e9996532fcce0557f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32521d35fd57aec463948cc586b8e597"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a32521d35fd57aec463948cc586b8e597">init_bullet_with_image</a> (<a class="el" href="struct_bullet.html">Bullet</a> *<a class="el" href="structbullet.html">bullet</a>)</td></tr>
+<tr class="memdesc:a32521d35fd57aec463948cc586b8e597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise un bullet avec son image.  <br /></td></tr>
+<tr class="separator:a32521d35fd57aec463948cc586b8e597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fdafc4ee598ce93239f9bcd8acbd6b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a2fdafc4ee598ce93239f9bcd8acbd6b1">free_bullet_with_image</a> (<a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> *bwi)</td></tr>
+<tr class="memdesc:a2fdafc4ee598ce93239f9bcd8acbd6b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libère un bullet avec son image.  <br /></td></tr>
+<tr class="separator:a2fdafc4ee598ce93239f9bcd8acbd6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b1c7ce7df8350380083df24d83f158c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a5b1c7ce7df8350380083df24d83f158c">add_bullet</a> (<a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **bullets, <a class="el" href="struct_bullet.html">Bullet</a> *<a class="el" href="structbullet.html">bullet</a>)</td></tr>
+<tr class="memdesc:a5b1c7ce7df8350380083df24d83f158c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute un bullet avec son image dans un tableau de bullet avec image.  <br /></td></tr>
+<tr class="separator:a5b1c7ce7df8350380083df24d83f158c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e703ded5ccdd785a6ef6ddc1daed3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a39e703ded5ccdd785a6ef6ddc1daed3e">display_bullets</a> (<a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **bullets)</td></tr>
+<tr class="memdesc:a39e703ded5ccdd785a6ef6ddc1daed3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les bullets.  <br /></td></tr>
+<tr class="separator:a39e703ded5ccdd785a6ef6ddc1daed3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58bc65d9121eb974ac5f810004589024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a58bc65d9121eb974ac5f810004589024">remove_out_screen_bullets</a> (<a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **bullets)</td></tr>
+<tr class="memdesc:a58bc65d9121eb974ac5f810004589024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Efface les bullets qui sont sortis de l'écran.  <br /></td></tr>
+<tr class="separator:a58bc65d9121eb974ac5f810004589024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a446a9d1b06314f6399af5035c0fc74c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a446a9d1b06314f6399af5035c0fc74c9">remove_bullet</a> (<a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **bullets, int index)</td></tr>
+<tr class="memdesc:a446a9d1b06314f6399af5035c0fc74c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Efface un bullet.  <br /></td></tr>
+<tr class="separator:a446a9d1b06314f6399af5035c0fc74c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4b7c8a32ef966cc860600dfc118ab2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#ae4b7c8a32ef966cc860600dfc118ab2d">display_ship</a> (<a class="el" href="struct_ship.html">Ship</a> *<a class="el" href="structship.html">ship</a>, MLV_Image *image)</td></tr>
+<tr class="memdesc:ae4b7c8a32ef966cc860600dfc118ab2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le vaisseau.  <br /></td></tr>
+<tr class="separator:ae4b7c8a32ef966cc860600dfc118ab2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e8a44dc2411db176bcb393d35f53e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a9e8a44dc2411db176bcb393d35f53e7b">display_pv_ammo</a> (<a class="el" href="struct_ship.html">Ship</a> *<a class="el" href="structship.html">ship</a>)</td></tr>
+<tr class="memdesc:a9e8a44dc2411db176bcb393d35f53e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les points de vie du vaisseau et les munitions.  <br /></td></tr>
+<tr class="separator:a9e8a44dc2411db176bcb393d35f53e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e4f6ee80d3006f687ae950466a2dd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a72e4f6ee80d3006f687ae950466a2dd9">display_map</a> (<a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **small_stars, <a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **big_stars, <a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> *moon)</td></tr>
+<tr class="memdesc:a72e4f6ee80d3006f687ae950466a2dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la map.  <br /></td></tr>
+<tr class="separator:a72e4f6ee80d3006f687ae950466a2dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d34e9b242b59809a467644e33da42ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a7d34e9b242b59809a467644e33da42ca">init_map</a> (<a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **small_stars, <a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **big_stars, <a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **moon)</td></tr>
+<tr class="memdesc:a7d34e9b242b59809a467644e33da42ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise la map.  <br /></td></tr>
+<tr class="separator:a7d34e9b242b59809a467644e33da42ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c17e5a84e4cb672efb1b819af472ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#ae8c17e5a84e4cb672efb1b819af472ef">free_map</a> (<a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **small_stars, <a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **big_stars, <a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **moon)</td></tr>
+<tr class="memdesc:ae8c17e5a84e4cb672efb1b819af472ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libère la map.  <br /></td></tr>
+<tr class="separator:ae8c17e5a84e4cb672efb1b819af472ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="abca003ae312fc8f9086f19727b552f29" name="abca003ae312fc8f9086f19727b552f29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abca003ae312fc8f9086f19727b552f29">&#9670;&#160;</a></span>HEALTH_BAR_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HEALTH_BAR_X&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00e97aa11b6d292d04dfd40859cd8c48" name="a00e97aa11b6d292d04dfd40859cd8c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e97aa11b6d292d04dfd40859cd8c48">&#9670;&#160;</a></span>HEALTH_BAR_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HEALTH_BAR_Y&#160;&#160;&#160;(<a class="el" href="interface_8h.html#aed89bd71aee8be823e8a20ec4e093c1e">HEIGHT</a> - 43)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed89bd71aee8be823e8a20ec4e093c1e" name="aed89bd71aee8be823e8a20ec4e093c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed89bd71aee8be823e8a20ec4e093c1e">&#9670;&#160;</a></span>HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HEIGHT&#160;&#160;&#160;640</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ef4d1b1fa8da3062a54eab1fd422199" name="a7ef4d1b1fa8da3062a54eab1fd422199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef4d1b1fa8da3062a54eab1fd422199">&#9670;&#160;</a></span>IMAGE_DIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IMAGE_DIR&#160;&#160;&#160;&quot;data/images/&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4331843c2698da5ccb18562eb1485681" name="a4331843c2698da5ccb18562eb1485681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4331843c2698da5ccb18562eb1485681">&#9670;&#160;</a></span>MAX_BULLETS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_BULLETS&#160;&#160;&#160;2048</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abebdef4ea1e081d598ed12436761cc34" name="abebdef4ea1e081d598ed12436761cc34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abebdef4ea1e081d598ed12436761cc34">&#9670;&#160;</a></span>MOON_IMAGE_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOON_IMAGE_HEIGHT&#160;&#160;&#160;66</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1cf7dea7f7efb8cea939b5e35856650" name="ab1cf7dea7f7efb8cea939b5e35856650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1cf7dea7f7efb8cea939b5e35856650">&#9670;&#160;</a></span>MOON_IMAGE_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOON_IMAGE_WIDTH&#160;&#160;&#160;90</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34faf9ba46fe9868f0acce685a57fdc8" name="a34faf9ba46fe9868f0acce685a57fdc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34faf9ba46fe9868f0acce685a57fdc8">&#9670;&#160;</a></span>SOUND_DIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SOUND_DIR&#160;&#160;&#160;&quot;data/sounds/&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e0c3ba2e0dbc0b63a5216224a65d7f5" name="a1e0c3ba2e0dbc0b63a5216224a65d7f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e0c3ba2e0dbc0b63a5216224a65d7f5">&#9670;&#160;</a></span>STAR_IMAGE_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STAR_IMAGE_HEIGHT&#160;&#160;&#160;320</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4ded192fef211f688d9932ef47bd813" name="af4ded192fef211f688d9932ef47bd813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ded192fef211f688d9932ef47bd813">&#9670;&#160;</a></span>STAR_IMAGE_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STAR_IMAGE_WIDTH&#160;&#160;&#160;160</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a241aeeb764887ae5e3de58b98f04b16d" name="a241aeeb764887ae5e3de58b98f04b16d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a241aeeb764887ae5e3de58b98f04b16d">&#9670;&#160;</a></span>WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WIDTH&#160;&#160;&#160;320</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des définitions de type</h2>
+<a id="a75ed681327b5763c40051536784ccb9f" name="a75ed681327b5763c40051536784ccb9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75ed681327b5763c40051536784ccb9f">&#9670;&#160;</a></span>BulletWithImage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__bullet__with__image.html">_bullet_with_image</a> <a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a612609225f24610261a52e0c94b0a659" name="a612609225f24610261a52e0c94b0a659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612609225f24610261a52e0c94b0a659">&#9670;&#160;</a></span>ImageWithPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__image__and__pos.html">_image_and_pos</a> <a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a5b1c7ce7df8350380083df24d83f158c" name="a5b1c7ce7df8350380083df24d83f158c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1c7ce7df8350380083df24d83f158c">&#9670;&#160;</a></span>add_bullet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_bullet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **&#160;</td>
+          <td class="paramname"><em>bullets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_bullet.html">Bullet</a> *&#160;</td>
+          <td class="paramname"><em>bullet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute un bullet avec son image dans un tableau de bullet avec image. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bullets</td><td>Le tableau de bullet avec image </td></tr>
+    <tr><td class="paramname">bullet</td><td>Le bullet avec son image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a39e703ded5ccdd785a6ef6ddc1daed3e" name="a39e703ded5ccdd785a6ef6ddc1daed3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e703ded5ccdd785a6ef6ddc1daed3e">&#9670;&#160;</a></span>display_bullets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_bullets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **&#160;</td>
+          <td class="paramname"><em>bullets</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche les bullets. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bullets</td><td>Le tableau de bullet avec image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a72e4f6ee80d3006f687ae950466a2dd9" name="a72e4f6ee80d3006f687ae950466a2dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e4f6ee80d3006f687ae950466a2dd9">&#9670;&#160;</a></span>display_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_map </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **&#160;</td>
+          <td class="paramname"><em>small_stars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **&#160;</td>
+          <td class="paramname"><em>big_stars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> *&#160;</td>
+          <td class="paramname"><em>moon</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche la map. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">small_stars</td><td>Les petites étoiles </td></tr>
+    <tr><td class="paramname">big_stars</td><td>Les grosses étoiles </td></tr>
+    <tr><td class="paramname">moon</td><td>La lune </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9e8a44dc2411db176bcb393d35f53e7b" name="a9e8a44dc2411db176bcb393d35f53e7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e8a44dc2411db176bcb393d35f53e7b">&#9670;&#160;</a></span>display_pv_ammo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_pv_ammo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_ship.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche les points de vie du vaisseau et les munitions. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ship</td><td>Le vaisseau </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae4b7c8a32ef966cc860600dfc118ab2d" name="ae4b7c8a32ef966cc860600dfc118ab2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4b7c8a32ef966cc860600dfc118ab2d">&#9670;&#160;</a></span>display_ship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_ship </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_ship.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Image *&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche le vaisseau. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ship</td><td>Le vaisseau </td></tr>
+    <tr><td class="paramname">image</td><td>L'image du vaisseau </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2fdafc4ee598ce93239f9bcd8acbd6b1" name="a2fdafc4ee598ce93239f9bcd8acbd6b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fdafc4ee598ce93239f9bcd8acbd6b1">&#9670;&#160;</a></span>free_bullet_with_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_bullet_with_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> *&#160;</td>
+          <td class="paramname"><em>bwi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libère un bullet avec son image. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bwi</td><td>Le bullet avec son image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c462565933ae5e9996532fcce0557f3" name="a3c462565933ae5e9996532fcce0557f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c462565933ae5e9996532fcce0557f3">&#9670;&#160;</a></span>free_image_with_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_image_with_position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> *&#160;</td>
+          <td class="paramname"><em>iwp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libère une image avec sa position. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iwp</td><td>L'image avec sa position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae8c17e5a84e4cb672efb1b819af472ef" name="ae8c17e5a84e4cb672efb1b819af472ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8c17e5a84e4cb672efb1b819af472ef">&#9670;&#160;</a></span>free_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_map </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **&#160;</td>
+          <td class="paramname"><em>small_stars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **&#160;</td>
+          <td class="paramname"><em>big_stars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **&#160;</td>
+          <td class="paramname"><em>moon</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libère la map. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">small_stars</td><td>Les petites étoiles </td></tr>
+    <tr><td class="paramname">big_stars</td><td>Les grosses étoiles </td></tr>
+    <tr><td class="paramname">moon</td><td>La lune </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a32521d35fd57aec463948cc586b8e597" name="a32521d35fd57aec463948cc586b8e597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32521d35fd57aec463948cc586b8e597">&#9670;&#160;</a></span>init_bullet_with_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> * init_bullet_with_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_bullet.html">Bullet</a> *&#160;</td>
+          <td class="paramname"><em>bullet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise un bullet avec son image. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bullet</td><td>Le bullet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>BulletWithImage* Le bullet avec son image </dd></dl>
+
+</div>
+</div>
+<a id="af915920bdf3f88ef36fc07407b80f62f" name="af915920bdf3f88ef36fc07407b80f62f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af915920bdf3f88ef36fc07407b80f62f">&#9670;&#160;</a></span>init_image_with_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> * init_image_with_position </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>image_file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise une image avec sa position. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image_file_name</td><td>Le nom du fichier image </td></tr>
+    <tr><td class="paramname">x</td><td>La position en x </td></tr>
+    <tr><td class="paramname">y</td><td>La position en y </td></tr>
+    <tr><td class="paramname">speed</td><td>La vitesse de déplacement </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>ImageWithPosition* L'image avec sa position </dd></dl>
+
+</div>
+</div>
+<a id="a7d34e9b242b59809a467644e33da42ca" name="a7d34e9b242b59809a467644e33da42ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d34e9b242b59809a467644e33da42ca">&#9670;&#160;</a></span>init_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_map </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **&#160;</td>
+          <td class="paramname"><em>small_stars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **&#160;</td>
+          <td class="paramname"><em>big_stars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **&#160;</td>
+          <td class="paramname"><em>moon</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise la map. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">small_stars</td><td>Les petites étoiles </td></tr>
+    <tr><td class="paramname">big_stars</td><td>Les grosses étoiles </td></tr>
+    <tr><td class="paramname">moon</td><td>La lune </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a446a9d1b06314f6399af5035c0fc74c9" name="a446a9d1b06314f6399af5035c0fc74c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a446a9d1b06314f6399af5035c0fc74c9">&#9670;&#160;</a></span>remove_bullet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove_bullet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **&#160;</td>
+          <td class="paramname"><em>bullets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Efface un bullet. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bullets</td><td>Le tableau de bullet avec image </td></tr>
+    <tr><td class="paramname">index</td><td>L'index du bullet avec son image à effacer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a58bc65d9121eb974ac5f810004589024" name="a58bc65d9121eb974ac5f810004589024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58bc65d9121eb974ac5f810004589024">&#9670;&#160;</a></span>remove_out_screen_bullets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove_out_screen_bullets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **&#160;</td>
+          <td class="paramname"><em>bullets</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Efface les bullets qui sont sortis de l'écran. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bullets</td><td>Le tableau de bullet avec image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

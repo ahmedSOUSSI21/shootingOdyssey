@@ -2,6 +2,7 @@
 #define __SHIP_H__
 #include <stdlib.h>
 #include "bullet.h"
+
 #define UP 1
 #define DOWN 2
 #define LEFT 3
@@ -19,7 +20,16 @@
 
 /**
 * @struct Ship
-* @brief Represente les vaisseaux.
+* @brief Structure représentant un vaisseau
+*
+* @param type le type du vaisseau
+* @param x la position x du vaisseau
+* @param y la position y du vaisseau
+* @param pv les points de vie du vaisseau
+* @param ammo le nombre de balles du vaisseau
+* @param speed la vitesse de déplacement du vaisseau
+* @param bullets les balles du vaisseau
+* @param last_fire le temps écoulé depuis le dernier tir du vaisseau
 */
 typedef struct ship{
     int type;

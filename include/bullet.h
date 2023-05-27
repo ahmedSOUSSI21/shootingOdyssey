@@ -5,6 +5,16 @@
 #define NORMA_ENEMY_BULLET_TYPE 2
 #define FLASHING_ENEMY_BULLET_TYPE 3
 
+/**
+ * @struct Bullet
+ * @brief structure représentant une balle
+    * @param type le type de la balle (player bullet, normal enemy bullet, flashing enemy bullet)
+    * @param x position x de la balle
+    * @param y position y de la balle
+    * @param damage la quantité de dégats que la balle inflige en hurtant un vaissau
+    * @param speed la vitesse de déplacement de la balle
+    * @param angle l'angle de tir de la balle
+*/
 typedef struct bullet{
     int type;
     int x;
@@ -13,6 +23,7 @@ typedef struct bullet{
     int speed;
     float angle;
 }Bullet;
+
 /**
  * @brief initialise une balle 
  * 
