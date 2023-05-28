@@ -280,7 +280,7 @@ void gameloop(){
         player_collision(bullets, player_ship, enemy_ships, animations);
 
         MLV_clear_window(MLV_COLOR_BLACK);
-        clock_gettime(CLOCK_REALTIME, &last);
+        clock_gettime(0, &last);
 
         display_map(small_stars, big_stars, moon);
         display_ship(player_ship, player_image);
@@ -360,7 +360,7 @@ void gameloop(){
         move_bullets(bullets);
         remove_out_screen_bullets(bullets);
 
-        clock_gettime(CLOCK_REALTIME, &new);
+        clock_gettime(0, &new);
         int accum = (new.tv_sec - last.tv_sec )+((new.tv_nsec - last.tv_nsec)/1000000000) ;
         if(accum < (1.0/60.0)){
             MLV_wait_milliseconds((int)(((1.0/60.0)-accum) * 1000));
