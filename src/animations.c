@@ -57,6 +57,10 @@ Animation * init_reloading_animation(int x, int y){
     images[7] = MLV_load_image("./data/images/reload.png");
     MLV_rotate_image(images[7], 360.00);
 
+    for(int i = 0; i < 8; i++){
+        MLV_resize_image(images[i], 33, 33);
+    }
+    
     res->images = images;
     res->image_index = 0;
     return res;
