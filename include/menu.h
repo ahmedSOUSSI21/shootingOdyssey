@@ -12,7 +12,7 @@
  * 
  * @return int Le choix du joueur
  */
-int display_menu();
+int display_menu(MLV_Image * background);
 
 /**
  * @brief affiche credits
