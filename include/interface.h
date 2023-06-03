@@ -119,11 +119,12 @@ void remove_bullet(BulletWithImage ** bullets, int index);
 void display_ship(Ship * ship, MLV_Image * image);
 
 /**
- * @brief Affiche les points de vie du vaisseau et les munitions
-    *
-    * @param ship Le vaisseau
+ * @brief Affiche les points de vie du vaisseau, les munitions ainsi que le score du joueur
+ * 
+ * @param ship le vaisseau
+ * @param score le score du joueur
  */
-void display_pv_ammo(Ship * ship);
+void display_pv_ammo_score(Ship * ship, float score);
 
 /**
  * @brief Affiche la map
@@ -151,5 +152,12 @@ void init_map(ImageWithPosition ** small_stars, ImageWithPosition ** big_stars, 
     * @param moon La lune
  */
 void free_map(ImageWithPosition ** small_stars, ImageWithPosition ** big_stars, ImageWithPosition ** moon);
+
+/**
+ * @brief renvoie le nom du joueur. La fonction appelle MLV_wait_input_box et laisse le joueur saisir son nom
+ * 
+ * @return char* le nom du joueur
+ */
+char * get_player_name();
 
 #endif

@@ -24,7 +24,16 @@ void free_image_with_position(ImageWithPosition * iwp){
 BulletWithImage * init_bullet_with_image(Bullet * bullet){
     BulletWithImage * bwi = malloc(sizeof(BulletWithImage));
     bwi->bullet = bullet;
-    bwi->image = MLV_load_image("./data/images/bullet.png");
+    if(bullet->type == PLAYER_SHIP_TYPE){
+        bwi->image = MLV_load_image("./data/images/bullet.png");
+    }
+    else if(bullet->type == NORMAL_ENEMY_SHIP_TYPE){
+        bwi->image = MLV_load_image("./data/images/normal_enemy_bullet.png");
+    }
+    else{
+        bwi->image = MLV_load_image("./data/images/flashing_enemy_bullet.png");
+    }
+    MLV_resize_image(bwi->image, 12, 12);
     return bwi;
 }
 
@@ -80,11 +89,14 @@ void display_ship(Ship * ship, MLV_Image * image){
 }
 
 //fonction qui permet d'afficher le score
-void display_pv_ammo(Ship * ship){
+void display_pv_ammo_score(Ship * ship, float score){
     MLV_draw_rectangle(2, 2, 100, 10, MLV_COLOR_RED);
     MLV_draw_filled_rectangle(2, 2, ship->pv, 10, MLV_COLOR_GREEN);
     MLV_draw_rectangle(2, 13, 15, 10, MLV_COLOR_RED);
     MLV_draw_filled_rectangle(2, 13, ship->ammo, 10, MLV_COLOR_BLUE);
+    char str[32];
+    sprintf(str, "score : %.2f", score);
+    MLV_draw_text(110, 2, str, MLV_COLOR_WHITE);
 }
 
 //fonction qui permet d'afficher la map
@@ -142,4 +154,10 @@ void free_map(ImageWithPosition ** small_stars, ImageWithPosition ** big_stars, 
         free_image_with_position(big_stars[i]);
     }
     free_image_with_position(*moon);
+}
+
+char * get_player_name(){
+    char * str;
+    MLV_wait_input_box(WIDTH/4, HEIGHT/4, 200 , 30, MLV_COLOR_WHITE, MLV_COLOR_BLACK, MLV_COLOR_BEIGE, "Your name:", &str);
+    return str;
 }

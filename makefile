@@ -22,11 +22,14 @@ animations.o: src/animations.c
 game.o: src/game.c 
 	$(CC) -c src/game.c $(CFLAGS) $(LDFLAGS)
 
+menu.o: src/menu.c 
+	$(CC) -c src/menu.c $(CFLAGS) $(LDFLAGS)
+
 main.o: src/main.c 
 	$(CC) -c src/main.c $(CFLAGS) $(LDFLAGS)
 
-main: bullet.o ship.o in_out.o interface.o animations.o game.o main.o
-	$(CC) -o main bullet.o ship.o in_out.o interface.o animations.o game.o main.o $(CFLAGS) $(LDFLAGS)
+main: bullet.o ship.o in_out.o interface.o animations.o game.o menu.o main.o
+	$(CC) -o main bullet.o ship.o in_out.o interface.o animations.o game.o menu.o main.o $(CFLAGS) $(LDFLAGS)
 
 clean:
 	rm -rf *.o

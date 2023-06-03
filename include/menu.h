@@ -3,9 +3,21 @@
 
 #include "interface.h"
 
-/*
-    * @brief Affiche le menu principal
-    */
-void display_menu();
+#define PLAY 1
+#define CREDITS 2
+#define QUIT 3 
+#define BACK_TO_MENU 4
+/**
+ * @brief affiche le menu principal du jeu
+ * 
+ * @return int Le choix du joueur
+ */
+int display_menu();
+
+/**
+ * @brief affiche credits
+ * 
+ */
+void display_credits(MLV_Image * image);
 
 #endif
