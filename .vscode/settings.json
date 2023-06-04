@@ -10,6 +10,7 @@
         "animations.h": "c",
         "stdio.h": "c",
         "interface.h": "c",
-        "menu.h": "c"
+        "menu.h": "c",
+        "typeinfo": "c"
     }
 }

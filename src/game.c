@@ -280,8 +280,6 @@ void gameloop(){
     int current_time = 0, previous_time = 0;
     float reload = 0.0;
     struct timespec new, last;
-    MLV_create_window("shooting Odyssey", NULL, WIDTH, HEIGHT);
-    MLV_init_audio();
     init_map(small_stars, big_stars, &moon);
     music = MLV_load_music("./data/sounds/menu-sound.ogg");
     explosion_sound = MLV_load_sound("./data/sounds/explosion.wav");
@@ -329,12 +327,14 @@ void gameloop(){
             MLV_wait_milliseconds((int)(((1.0/60.0)-accum) * 1000));
         }
     }
+    /*
     char * name = get_player_name();
     write_score("./data/output/scores.txt", name, player_score);
     free(name);
+    */
+    MLV_stop_music();
     MLV_free_music(music);
     MLV_free_sound(explosion_sound);
-    MLV_free_audio();
     free_all_animations(animations);
     free_map(small_stars, big_stars, &moon);
     free_bullets(bullets);
@@ -343,5 +343,4 @@ void gameloop(){
     MLV_free_image(player_image);
     MLV_free_image(enemy_image);
     MLV_free_image(enemy_image2);
-    MLV_free_window();
 }
