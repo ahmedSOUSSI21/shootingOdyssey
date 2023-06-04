@@ -18,6 +18,6 @@ int display_menu(MLV_Image * background);
  * @brief affiche credits
  * 
  */
-void display_credits(MLV_Image * image);
+int display_credits(MLV_Image * image);
 
 #endif

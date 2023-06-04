@@ -14,6 +14,7 @@
 #define MAX_ENEMY_SHIPS 100
 
 float player_score;
+MLV_Sound * explosion_sound;
 
 void move_bullets(BulletWithImage ** bullets){
     int i;
@@ -85,6 +86,7 @@ void enemy_collision(BulletWithImage ** bullets, Ship ** enemy_ships, Animation 
                         && bullets[i]->bullet->y >= enemy_ships[j]->y && bullets[i]->bullet->y < (enemy_ships[j]->y + SHIP_HEIGHT)){
                             add_animation(animations, init_explosion_animation(bullets[i]->bullet->x, bullets[i]->bullet->y));
                             take_damage_from_bullet(enemy_ships[j], bullets[i]->bullet);
+                            MLV_play_sound(explosion_sound, 1.0);
                             if(enemy_ships[j]->pv <= 0){
                                 if(enemy_ships[j]->type == NORMAL_ENEMY_SHIP_TYPE){
                                     player_score += 100;
@@ -118,6 +120,7 @@ void player_collision(BulletWithImage ** bullets, Ship * player_ship, Ship** ene
                     add_animation(animations, init_explosion_animation(bullets[i]->bullet->x, bullets[i]->bullet->y));
                     take_damage_from_bullet(player_ship, bullets[i]->bullet);
                     remove_bullet(bullets, i);
+                    MLV_play_sound(explosion_sound, 1.0);
                 }
             }
         }
@@ -127,6 +130,7 @@ void player_collision(BulletWithImage ** bullets, Ship * player_ship, Ship** ene
         if(enemy_ships[i] != NULL){
             if(distance(player_ship, enemy_ships[i]) <= 10) {
                 damage_between_ships(player_ship, enemy_ships[i]);
+                MLV_play_sound(explosion_sound, 1.0);
                 if(enemy_ships[i]->pv <= 0){
                     free_ship(enemy_ships[i]);
                     enemy_ships[i] = NULL;
@@ -280,6 +284,7 @@ void gameloop(){
     MLV_init_audio();
     init_map(small_stars, big_stars, &moon);
     music = MLV_load_music("./data/sounds/menu-sound.ogg");
+    explosion_sound = MLV_load_sound("./data/sounds/explosion.wav");
     MLV_play_music(music,1.0, -1);
     player_image = MLV_load_image("./data/images/ship.png");
     player_ship = init_player_ship(150, 600, 5);
@@ -328,6 +333,8 @@ void gameloop(){
     write_score("./data/output/scores.txt", name, player_score);
     free(name);
     MLV_free_music(music);
+    MLV_free_sound(explosion_sound);
+    MLV_free_audio();
     free_all_animations(animations);
     free_map(small_stars, big_stars, &moon);
     free_bullets(bullets);

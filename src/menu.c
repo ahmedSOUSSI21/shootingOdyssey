@@ -4,16 +4,36 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void display_credits(MLV_Image * background){
+int display_credits(MLV_Image * background){
+    int mouseX, mouseY;
     MLV_resize_image(background, WIDTH, HEIGHT);
     MLV_draw_image(background, 0, 0);
     MLV_Font * font = MLV_load_font("./data/fonts/main-font.ttf", 20);
-    MLV_draw_text_with_font(WIDTH/3 + 2, HEIGHT/4 + 50, "Developpeurs: ",font, MLV_COLOR_GREEN1);
-    MLV_draw_text_with_font(WIDTH/3 + 2, HEIGHT/4 + 70, "Ahmed SOUSSI", font, MLV_COLOR_WHITE);
-    MLV_draw_text_with_font(WIDTH/3 + 2, HEIGHT/4 + 90, "Enzo Greneche", font, MLV_COLOR_WHITE);
-    MLV_draw_text_with_font(WIDTH/3 + 2, HEIGHT/4 + 120, "Remerciments: ", font, MLV_COLOR_GREEN1);
-    MLV_draw_text_with_font(WIDTH/3 + 2, HEIGHT/4 + 140, "M. Nicolas BORIE", font, MLV_COLOR_WHITE);
+    MLV_draw_text_with_font(WIDTH/3 + 2, HEIGHT/10, "Developpeurs: ",font, MLV_COLOR_GREEN1);
+    MLV_draw_text_with_font(WIDTH/3 + 2, HEIGHT/10 + 20, "Ahmed SOUSSI", font, MLV_COLOR_WHITE);
+    MLV_draw_text_with_font(WIDTH/3 + 2, HEIGHT/10 + 40, "Enzo GRENECHE", font, MLV_COLOR_WHITE);
+    MLV_draw_text_with_font(WIDTH/3 + 2, HEIGHT/10 + 80, "Remerciments: ", font, MLV_COLOR_GREEN1);
+    MLV_draw_text_with_font(WIDTH/3 + 2, HEIGHT/10 + 100, "M. Nicolas BORIE", font, MLV_COLOR_WHITE);
+    MLV_get_mouse_position(&mouseX, &mouseY);
+    if(mouseX >= (WIDTH/3) && mouseX < (WIDTH/3 + 20*6) && mouseY >= (HEIGHT - 50) && mouseY < (HEIGHT - 50 + 20*2)){
+        MLV_draw_filled_rectangle(WIDTH/3, HEIGHT - 50, 20*6, 20*2, MLV_COLOR_GREEN1);
+        MLV_draw_rectangle(WIDTH/3, HEIGHT - 50, 20*6, 20*2, MLV_COLOR_PURPLE1);
+    }
+    else{
+        MLV_draw_filled_rectangle(WIDTH/3, HEIGHT - 50, 20*6, 20*2, MLV_COLOR_PURPLE1);
+        MLV_draw_rectangle(WIDTH/3, HEIGHT - 50, 20*6, 20*2, MLV_COLOR_GREEN1);
+    }
+
+    MLV_Button_state state;
+    MLV_Event event = MLV_get_event(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, &state);
+    if(event == MLV_MOUSE_BUTTON && state == MLV_PRESSED && mouseX >= (WIDTH/3) && mouseX < (WIDTH/3 + 20*6) && mouseY >= (HEIGHT - 50) && mouseY < (HEIGHT - 50 + 20*2)){
+        MLV_free_font(font);
+        return BACK_TO_MENU;
+    }   
+
+    MLV_draw_text_with_font(WIDTH/3 + 5, HEIGHT - 50 + 7, "Back to menu", font, MLV_COLOR_WHITE);
     MLV_free_font(font);
+    return CREDITS;
 }
 
 void display_play_box(int mouseX, int mouseY){

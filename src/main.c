@@ -12,25 +12,32 @@
 
 int main(int argc, char * argv[]){
     MLV_create_window("Menu", NULL, WIDTH, HEIGHT);
+    MLV_init_audio();
+    MLV_Music * menu_music = MLV_load_music("./data/sounds/menu-principal.mp3");
+    MLV_play_music(menu_music, 1.0, -1);
     MLV_Image * background_image = MLV_load_image("./data/images/credits.png");
     int choice = display_menu(background_image);
-    if(choice == QUIT){
-        MLV_free_image(background_image);
-        MLV_free_window();
-        return 0;
-    }
-    if(choice == CREDITS){
-        display_credits(background_image);
+    
+    while(choice != PLAY){
+        if(choice == QUIT) {
+            MLV_free_image(background_image);
+            MLV_free_window();
+            return 0;
+        }
+        if(choice == CREDITS){
+            choice = display_credits(background_image);
+        }
+        if(choice == BACK_TO_MENU){
+            choice = display_menu(background_image);
+        }
         MLV_actualise_window();
-        MLV_wait_seconds(5);
-        MLV_free_image(background_image);
-        MLV_free_window();
-        return 0;
     }
-    else{
-        MLV_free_image(background_image);
-        MLV_free_window();
-        gameloop();
-    } 
+    MLV_stop_music();
+    MLV_free_music(menu_music);
+    MLV_free_audio();
+    MLV_free_image(background_image);
+    MLV_free_window();
+    gameloop();
+
     return 0;
 }

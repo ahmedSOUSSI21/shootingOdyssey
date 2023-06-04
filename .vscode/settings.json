@@ -8,6 +8,8 @@
         "ship.h": "c",
         "stdlib.h": "c",
         "animations.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "interface.h": "c",
+        "menu.h": "c"
     }
 }
