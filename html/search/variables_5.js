@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nb_5fimages_0',['nb_images',['../struct__animation.html#a06221355f80555d9cec33d554ea79cce',1,'_animation']]]
+  ['last_5ffire_0',['last_fire',['../structship.html#a976769433e85819ce27485f34722a4ec',1,'ship']]],
+  ['last_5ftime_1',['last_time',['../struct__animation.html#a886a82758400ccbd2fd532c8ccc99428',1,'_animation']]]
 ];

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['x_0',['x',['../struct__animation.html#a5113959a7f2582cb2ba3c026aec32cff',1,'_animation::x()'],['../structbullet.html#a8aa2473ae3eecca4edc2456b0682314b',1,'bullet::x()'],['../struct__image__and__pos.html#acb01d30eb4755b0f131a80f83286c387',1,'_image_and_pos::x()'],['../structship.html#a9a2e3cbd628e8deacdf9e3df078f7bb5',1,'ship::x()']]]
+  ['wait_0',['wait',['../struct__animation.html#af072417cfd066a12c297aba36b17ef5a',1,'_animation']]],
+  ['width_1',['WIDTH',['../interface_8h.html#a241aeeb764887ae5e3de58b98f04b16d',1,'interface.h']]],
+  ['write_5fscore_2',['write_score',['../in__out_8h.html#aa9e5f8cd720bec76246fd9d81a6dbe7d',1,'write_score(const char *file_name, const char *player_name, float score):&#160;in_out.c'],['../in__out_8c.html#aa9e5f8cd720bec76246fd9d81a6dbe7d',1,'write_score(const char *file_name, const char *player_name, float score):&#160;in_out.c']]]
 ];

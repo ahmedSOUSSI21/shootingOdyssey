@@ -7,6 +7,7 @@
 #define CREDITS 2
 #define QUIT 3 
 #define BACK_TO_MENU 4
+
 /**
  * @brief affiche le menu principal du jeu
  * 

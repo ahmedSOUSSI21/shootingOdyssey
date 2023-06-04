@@ -75,7 +75,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Fonctions</a>  </div>
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">Référence du fichier game.c</div></div>
 </div><!--header-->
 <div class="contents">
@@ -128,9 +129,18 @@ Fonctions</h2></td></tr>
 <tr class="separator:abb2351cae9fad328437f71490c627638"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a5fbc1daae29a08ad0c71c0bb3d390b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a5a5fbc1daae29a08ad0c71c0bb3d390b">free_all_enemies</a> (<a class="el" href="struct_ship.html">Ship</a> **enemy_ships)</td></tr>
 <tr class="separator:a5a5fbc1daae29a08ad0c71c0bb3d390b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3dbbbfcf26110f08d7d0cbd830a5133"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#ae3dbbbfcf26110f08d7d0cbd830a5133">treat_event</a> (<a class="el" href="struct_ship.html">Ship</a> *player_ship, <a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **bullets, int *quit, int *move_left, int *move_right, int *move_up, int *move_down, int *fire_clicked)</td></tr>
+<tr class="separator:ae3dbbbfcf26110f08d7d0cbd830a5133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74fbbfe2f49cdfca36f03b640a91aef2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a74fbbfe2f49cdfca36f03b640a91aef2">gameloop</a> ()</td></tr>
 <tr class="memdesc:a74fbbfe2f49cdfca36f03b640a91aef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boucle du jeu.  <br /></td></tr>
 <tr class="separator:a74fbbfe2f49cdfca36f03b640a91aef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a79c14182c2458c2c3520a199b0cc5d4c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a79c14182c2458c2c3520a199b0cc5d4c">player_score</a></td></tr>
+<tr class="separator:a79c14182c2458c2c3520a199b0cc5d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf03af0ab6cfe92df86ab33c6ec308b4"><td class="memItemLeft" align="right" valign="top">MLV_Sound *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#abf03af0ab6cfe92df86ab33c6ec308b4">explosion_sound</a></td></tr>
+<tr class="separator:abf03af0ab6cfe92df86ab33c6ec308b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des macros</h2>
 <a id="a99f9cfd68ef4237b568bda6e3e63312f" name="a99f9cfd68ef4237b568bda6e3e63312f"></a>
@@ -571,6 +581,99 @@ Fonctions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3dbbbfcf26110f08d7d0cbd830a5133" name="ae3dbbbfcf26110f08d7d0cbd830a5133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3dbbbfcf26110f08d7d0cbd830a5133">&#9670;&#160;</a></span>treat_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void treat_event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_ship.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>player_ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **&#160;</td>
+          <td class="paramname"><em>bullets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>quit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>move_left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>move_right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>move_up</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>move_down</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>fire_clicked</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="abf03af0ab6cfe92df86ab33c6ec308b4" name="abf03af0ab6cfe92df86ab33c6ec308b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf03af0ab6cfe92df86ab33c6ec308b4">&#9670;&#160;</a></span>explosion_sound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MLV_Sound* explosion_sound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79c14182c2458c2c3520a199b0cc5d4c" name="a79c14182c2458c2c3520a199b0cc5d4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79c14182c2458c2c3520a199b0cc5d4c">&#9670;&#160;</a></span>player_score</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float player_score</td>
         </tr>
       </table>
 </div><div class="memdoc">

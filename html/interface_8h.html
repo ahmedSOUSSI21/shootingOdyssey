@@ -159,9 +159,9 @@ Fonctions</h2></td></tr>
 <tr class="memitem:ae4b7c8a32ef966cc860600dfc118ab2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#ae4b7c8a32ef966cc860600dfc118ab2d">display_ship</a> (<a class="el" href="struct_ship.html">Ship</a> *<a class="el" href="structship.html">ship</a>, MLV_Image *image)</td></tr>
 <tr class="memdesc:ae4b7c8a32ef966cc860600dfc118ab2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le vaisseau.  <br /></td></tr>
 <tr class="separator:ae4b7c8a32ef966cc860600dfc118ab2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e8a44dc2411db176bcb393d35f53e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a9e8a44dc2411db176bcb393d35f53e7b">display_pv_ammo</a> (<a class="el" href="struct_ship.html">Ship</a> *<a class="el" href="structship.html">ship</a>)</td></tr>
-<tr class="memdesc:a9e8a44dc2411db176bcb393d35f53e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les points de vie du vaisseau et les munitions.  <br /></td></tr>
-<tr class="separator:a9e8a44dc2411db176bcb393d35f53e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6249f1e1d072ba1fd787939f54e2282"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#ae6249f1e1d072ba1fd787939f54e2282">display_pv_ammo_score</a> (<a class="el" href="struct_ship.html">Ship</a> *<a class="el" href="structship.html">ship</a>, float score)</td></tr>
+<tr class="memdesc:ae6249f1e1d072ba1fd787939f54e2282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les points de vie du vaisseau, les munitions ainsi que le score du joueur.  <br /></td></tr>
+<tr class="separator:ae6249f1e1d072ba1fd787939f54e2282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72e4f6ee80d3006f687ae950466a2dd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a72e4f6ee80d3006f687ae950466a2dd9">display_map</a> (<a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **small_stars, <a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **big_stars, <a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> *moon)</td></tr>
 <tr class="memdesc:a72e4f6ee80d3006f687ae950466a2dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la map.  <br /></td></tr>
 <tr class="separator:a72e4f6ee80d3006f687ae950466a2dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,6 +171,9 @@ Fonctions</h2></td></tr>
 <tr class="memitem:ae8c17e5a84e4cb672efb1b819af472ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#ae8c17e5a84e4cb672efb1b819af472ef">free_map</a> (<a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **small_stars, <a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **big_stars, <a class="el" href="interface_8h.html#a612609225f24610261a52e0c94b0a659">ImageWithPosition</a> **moon)</td></tr>
 <tr class="memdesc:ae8c17e5a84e4cb672efb1b819af472ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libère la map.  <br /></td></tr>
 <tr class="separator:ae8c17e5a84e4cb672efb1b819af472ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2c91fa5ba8f1932a4ad23faee946e1e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#aa2c91fa5ba8f1932a4ad23faee946e1e">get_player_name</a> ()</td></tr>
+<tr class="memdesc:aa2c91fa5ba8f1932a4ad23faee946e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">renvoie le nom du joueur. La fonction appelle MLV_wait_input_box et laisse le joueur saisir son nom  <br /></td></tr>
+<tr class="separator:aa2c91fa5ba8f1932a4ad23faee946e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des macros</h2>
 <a id="abca003ae312fc8f9086f19727b552f29" name="abca003ae312fc8f9086f19727b552f29"></a>
@@ -464,26 +467,37 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9e8a44dc2411db176bcb393d35f53e7b" name="a9e8a44dc2411db176bcb393d35f53e7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e8a44dc2411db176bcb393d35f53e7b">&#9670;&#160;</a></span>display_pv_ammo()</h2>
+<a id="ae6249f1e1d072ba1fd787939f54e2282" name="ae6249f1e1d072ba1fd787939f54e2282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6249f1e1d072ba1fd787939f54e2282">&#9670;&#160;</a></span>display_pv_ammo_score()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void display_pv_ammo </td>
+          <td class="memname">void display_pv_ammo_score </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_ship.html">Ship</a> *&#160;</td>
-          <td class="paramname"><em>ship</em></td><td>)</td>
+          <td class="paramname"><em>ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>score</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Affiche les points de vie du vaisseau et les munitions. </p>
+<p>Affiche les points de vie du vaisseau, les munitions ainsi que le score du joueur. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ship</td><td>Le vaisseau </td></tr>
+    <tr><td class="paramname">ship</td><td>le vaisseau </td></tr>
+    <tr><td class="paramname">score</td><td>le score du joueur </td></tr>
   </table>
   </dd>
 </dl>
@@ -620,6 +634,26 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aa2c91fa5ba8f1932a4ad23faee946e1e" name="aa2c91fa5ba8f1932a4ad23faee946e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2c91fa5ba8f1932a4ad23faee946e1e">&#9670;&#160;</a></span>get_player_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * get_player_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>renvoie le nom du joueur. La fonction appelle MLV_wait_input_box et laisse le joueur saisir son nom </p>
+<dl class="section return"><dt>Renvoie</dt><dd>char* le nom du joueur </dd></dl>
 
 </div>
 </div>

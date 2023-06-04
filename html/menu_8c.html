@@ -79,24 +79,146 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="menu_8h_source.html">../include/menu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="interface_8h_source.html">../include/interface.h</a>&quot;</code><br />
+<code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a39f5190c4bbb94c4d470854781e91105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#a39f5190c4bbb94c4d470854781e91105">display_menu</a> ()</td></tr>
-<tr class="separator:a39f5190c4bbb94c4d470854781e91105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac72df179fc33d54f256280ceb9a9ea2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#ac72df179fc33d54f256280ceb9a9ea2a">display_credits</a> (MLV_Image *background)</td></tr>
+<tr class="memdesc:ac72df179fc33d54f256280ceb9a9ea2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">affiche credits  <br /></td></tr>
+<tr class="separator:ac72df179fc33d54f256280ceb9a9ea2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc175b5fefe326023b210368e356a1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#accc175b5fefe326023b210368e356a1c">display_play_box</a> (int mouseX, int mouseY)</td></tr>
+<tr class="separator:accc175b5fefe326023b210368e356a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1150130476c1a9e4fdeeaa6f2a522711"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#a1150130476c1a9e4fdeeaa6f2a522711">display_credits_box</a> (int mouseX, int mouseY)</td></tr>
+<tr class="separator:a1150130476c1a9e4fdeeaa6f2a522711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee5223f0b3fe426e2509d5f9d717a2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#a3ee5223f0b3fe426e2509d5f9d717a2f">display_quit_box</a> (int mouseX, int mouseY)</td></tr>
+<tr class="separator:a3ee5223f0b3fe426e2509d5f9d717a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20408647258cf04e9c71edb2cf7f0386"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8c.html#a20408647258cf04e9c71edb2cf7f0386">display_menu</a> (MLV_Image *background)</td></tr>
+<tr class="memdesc:a20408647258cf04e9c71edb2cf7f0386"><td class="mdescLeft">&#160;</td><td class="mdescRight">affiche le menu principal du jeu  <br /></td></tr>
+<tr class="separator:a20408647258cf04e9c71edb2cf7f0386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des fonctions</h2>
-<a id="a39f5190c4bbb94c4d470854781e91105" name="a39f5190c4bbb94c4d470854781e91105"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39f5190c4bbb94c4d470854781e91105">&#9670;&#160;</a></span>display_menu()</h2>
+<a id="ac72df179fc33d54f256280ceb9a9ea2a" name="ac72df179fc33d54f256280ceb9a9ea2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac72df179fc33d54f256280ceb9a9ea2a">&#9670;&#160;</a></span>display_credits()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void display_menu </td>
+          <td class="memname">int display_credits </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">MLV_Image *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>affiche credits </p>
+
+</div>
+</div>
+<a id="a1150130476c1a9e4fdeeaa6f2a522711" name="a1150130476c1a9e4fdeeaa6f2a522711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1150130476c1a9e4fdeeaa6f2a522711">&#9670;&#160;</a></span>display_credits_box()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_credits_box </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20408647258cf04e9c71edb2cf7f0386" name="a20408647258cf04e9c71edb2cf7f0386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20408647258cf04e9c71edb2cf7f0386">&#9670;&#160;</a></span>display_menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int display_menu </td>
+          <td>(</td>
+          <td class="paramtype">MLV_Image *&#160;</td>
+          <td class="paramname"><em>background</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>affiche le menu principal du jeu </p>
+<dl class="section return"><dt>Renvoie</dt><dd>int Le choix du joueur </dd></dl>
+
+</div>
+</div>
+<a id="accc175b5fefe326023b210368e356a1c" name="accc175b5fefe326023b210368e356a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc175b5fefe326023b210368e356a1c">&#9670;&#160;</a></span>display_play_box()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_play_box </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ee5223f0b3fe426e2509d5f9d717a2f" name="a3ee5223f0b3fe426e2509d5f9d717a2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee5223f0b3fe426e2509d5f9d717a2f">&#9670;&#160;</a></span>display_quit_box()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_quit_box </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['pi_0',['PI',['../ship_8h.html#a598a3330b3c21701223ee0ca14316eca',1,'ship.h']]],
-  ['player_5fbullet_5ftype_1',['PLAYER_BULLET_TYPE',['../bullet_8h.html#a03c65aebde84f4f75a3f6391a8162547',1,'bullet.h']]],
-  ['player_5fminimum_5freload_5ftime_2',['PLAYER_MINIMUM_RELOAD_TIME',['../ship_8h.html#af66de5882cb020c400f3976ecd4c3601',1,'ship.h']]],
-  ['player_5fship_5ftype_3',['PLAYER_SHIP_TYPE',['../ship_8h.html#a7b2dcc10822783cecd0bf2eee38993bc',1,'ship.h']]]
+  ['max_5fanimations_0',['MAX_ANIMATIONS',['../game_8c.html#a99f9cfd68ef4237b568bda6e3e63312f',1,'game.c']]],
+  ['max_5fbullets_1',['MAX_BULLETS',['../interface_8h.html#a4331843c2698da5ccb18562eb1485681',1,'interface.h']]],
+  ['max_5fenemy_5fships_2',['MAX_ENEMY_SHIPS',['../game_8c.html#a1bc46190ffe67f528b448408a9f62ea7',1,'game.c']]],
+  ['moon_5fimage_5fheight_3',['MOON_IMAGE_HEIGHT',['../interface_8h.html#abebdef4ea1e081d598ed12436761cc34',1,'interface.h']]],
+  ['moon_5fimage_5fwidth_4',['MOON_IMAGE_WIDTH',['../interface_8h.html#ab1cf7dea7f7efb8cea939b5e35856650',1,'interface.h']]]
 ];

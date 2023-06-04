@@ -81,14 +81,19 @@ $(function() {
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="interface_8h.html">interface.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">    * @brief Affiche le menu principal</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">void</span> <a class="code hl_function" href="menu_8h.html#a39f5190c4bbb94c4d470854781e91105">display_menu</a>();</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="menu_8h.html#a34deddb3d2e1791fd7ce5acc13ffc8df">    6</a></span><span class="preprocessor">#define PLAY 1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="menu_8h.html#a28017dea6f5becdb38eba6eac6f51bbc">    7</a></span><span class="preprocessor">#define CREDITS 2</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="menu_8h.html#ad24e2b54375e12474e65ebf7175988fb">    8</a></span><span class="preprocessor">#define QUIT 3 </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="menu_8h.html#a0f25bcb0820c5526101086d10208210f">    9</a></span><span class="preprocessor">#define BACK_TO_MENU 4</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">int</span> <a class="code hl_function" href="menu_8h.html#a20408647258cf04e9c71edb2cf7f0386">display_menu</a>(MLV_Image * background);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">int</span> <a class="code hl_function" href="menu_8h.html#a15a8e03de1f9f1a1354284381c238593">display_credits</a>(MLV_Image * image);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ainterface_8h_html"><div class="ttname"><a href="interface_8h.html">interface.h</a></div></div>
-<div class="ttc" id="amenu_8h_html_a39f5190c4bbb94c4d470854781e91105"><div class="ttname"><a href="menu_8h.html#a39f5190c4bbb94c4d470854781e91105">display_menu</a></div><div class="ttdeci">void display_menu()</div><div class="ttdef"><b>Definition:</b> menu.c:3</div></div>
+<div class="ttc" id="amenu_8h_html_a15a8e03de1f9f1a1354284381c238593"><div class="ttname"><a href="menu_8h.html#a15a8e03de1f9f1a1354284381c238593">display_credits</a></div><div class="ttdeci">int display_credits(MLV_Image *image)</div><div class="ttdoc">affiche credits</div><div class="ttdef"><b>Definition:</b> menu.c:7</div></div>
+<div class="ttc" id="amenu_8h_html_a20408647258cf04e9c71edb2cf7f0386"><div class="ttname"><a href="menu_8h.html#a20408647258cf04e9c71edb2cf7f0386">display_menu</a></div><div class="ttdeci">int display_menu(MLV_Image *background)</div><div class="ttdoc">affiche le menu principal du jeu</div><div class="ttdef"><b>Definition:</b> menu.c:90</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
