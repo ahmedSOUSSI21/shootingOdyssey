@@ -14,6 +14,8 @@
 #define MAX_ENEMY_SHIPS 100
 
 float player_score;
+int enemy_killed;
+float time_played;
 MLV_Sound * explosion_sound;
 
 void move_bullets(BulletWithImage ** bullets){
@@ -96,6 +98,7 @@ void enemy_collision(BulletWithImage ** bullets, Ship ** enemy_ships, Animation 
                                 }
                                 free_ship(enemy_ships[j]);
                                 enemy_ships[j] = NULL;
+                                enemy_killed++;
                             }
                             remove_bullet(bullets, i);
                         }
@@ -134,6 +137,7 @@ void player_collision(BulletWithImage ** bullets, Ship * player_ship, Ship** ene
                 if(enemy_ships[i]->pv <= 0){
                     free_ship(enemy_ships[i]);
                     enemy_ships[i] = NULL;
+                    enemy_killed++;
                 }
             }
         }
@@ -268,6 +272,8 @@ void gameloop(){
     BulletWithImage * bullets[MAX_BULLETS] = {NULL};
     MLV_Music* music;
     player_score = 0.0;
+    enemy_killed = 0;
+    time_played = 0;
     int quit = 0, move_left = 0, move_right = 0, move_up = 0, move_down = 0, fire_clicked = 0;
     MLV_Image * player_image;
     MLV_Image * enemy_image;
@@ -295,6 +301,7 @@ void gameloop(){
         current_time = MLV_get_time();
         deltaTime = (float)(current_time - previous_time);
         player_score += deltaTime/100;
+        time_played += deltaTime/CLOCKS_PER_SEC;
         player_ship->last_fire += deltaTime;
         if(player_ship->ammo <= 0){
             if(reload == 0.0)   add_animation(animations, init_reloading_animation(WIDTH/2, HEIGHT/2));
@@ -327,11 +334,30 @@ void gameloop(){
             MLV_wait_milliseconds((int)(((1.0/60.0)-accum) * 1000));
         }
     }
-    /*
+
     char * name = get_player_name();
     write_score("./data/output/scores.txt", name, player_score);
     free(name);
-    */
+    
+    MLV_Image * background_image = MLV_load_image("./data/images/credits.png");
+    MLV_resize_image(background_image, WIDTH, HEIGHT);
+
+    int size;
+    Score * scores = fread_score("./data/output/scores.txt", &size);
+    if(size > 10){
+        size = 10;
+    }
+
+    int back_to_menu = 0;
+    while(!back_to_menu){
+        int mouse_x, mouse_y;
+        MLV_get_mouse_position(&mouse_x, &mouse_y);
+        back_to_menu = display_game_over(player_score, enemy_killed, time_played, mouse_x, mouse_y, scores, size, background_image);
+        MLV_actualise_window();
+    }
+    
+    MLV_free_image(background_image);
+    free(scores);
     MLV_stop_music();
     MLV_free_music(music);
     MLV_free_sound(explosion_sound);

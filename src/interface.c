@@ -161,3 +161,39 @@ char * get_player_name(){
     MLV_wait_input_box(WIDTH/4, HEIGHT/4, 200 , 30, MLV_COLOR_WHITE, MLV_COLOR_BLACK, MLV_COLOR_BEIGE, "Your name:", &str);
     return str;
 }
+
+int display_game_over(float score, int enemy_killed, float time_played, int mouseX, int mouseY, Score * scores, int size, MLV_Image * background){
+    char str[32];
+    MLV_Font * font = MLV_load_font("./data/fonts/main-font.ttf", 20);
+    MLV_draw_image(background, 0, 0);
+    MLV_draw_text_with_font(WIDTH/2 - 100, HEIGHT/4 - 100, "GAME OVER", font, MLV_COLOR_GREEN);
+    MLV_draw_text_with_font(WIDTH/2 - 100, HEIGHT/4, "Score : ", font, MLV_COLOR_GREEN);
+    sprintf(str, "%.2f", score);
+    MLV_draw_text_with_font(WIDTH/2 + 80, HEIGHT/4,str, font, MLV_COLOR_WHITE);
+    MLV_draw_text_with_font(WIDTH/2 - 100, HEIGHT/4 + 30, "Enemy killed : ", font, MLV_COLOR_GREEN);
+    sprintf(str, "%d", enemy_killed);
+    MLV_draw_text_with_font(WIDTH/2 + 80, HEIGHT/4 + 60, str, font, MLV_COLOR_WHITE);
+    sprintf(str, "%.2f", time_played);
+    MLV_draw_text_with_font(WIDTH/2 - 100, HEIGHT/4 + 90, "Time played : ", font, MLV_COLOR_GREEN);
+    MLV_draw_text_with_font(WIDTH/2 + 80, HEIGHT/4 + 120, str, font, MLV_COLOR_WHITE);
+    MLV_draw_text_with_font(WIDTH/2 - 100, HEIGHT/4 + 150, "Top 10 : ", font, MLV_COLOR_GREEN);
+    
+    for(int i = 0; i < size; i++){
+        MLV_draw_text_with_font(WIDTH/2 - 100, HEIGHT/4 + 180 + i * 20, scores[i].player_name, font, MLV_COLOR_RED);
+        sprintf(str, "%.2f", scores[i].score);
+        MLV_draw_text_with_font(WIDTH/2 + 80, HEIGHT/4 + 180 + i * 20, str, font, MLV_COLOR_WHITE);
+    }
+    int result = 0;
+    if(mouseX >= WIDTH/2 - 100 && mouseX <= WIDTH/2 + 100 && mouseY >= HEIGHT/4 + 210 + size * 20 && mouseY <= HEIGHT/4 + 230 + size * 20){
+        MLV_draw_text_with_font(WIDTH/2 - 100, HEIGHT/4 + 210 + size * 20, "BACK TO MENU", font, MLV_COLOR_GREEN);
+    }else{
+        MLV_draw_text_with_font(WIDTH/2 - 100, HEIGHT/4 + 210 + size * 20, "BACK TO MENU", font, MLV_COLOR_WHITE);
+    }
+    MLV_free_font(font);
+    MLV_Button_state state;
+    MLV_Event event = MLV_get_event(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, &state);
+    if(event == MLV_MOUSE_BUTTON && state == MLV_PRESSED && mouseX >= WIDTH/2 - 100 && mouseX <= WIDTH/2 + 100 && mouseY >= HEIGHT/4 + 210 + size * 20 && mouseY <= HEIGHT/4 + 230 + size * 20){
+        result = 1;
+    }
+    return result;
+}

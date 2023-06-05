@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "./ship.h"
+#define MAX_SCORES 1024
 
 /**
 * @brief Reads the player's ship from a file
@@ -22,5 +23,20 @@ void read_enemies(const char * file_name, Ship ** enemy_ships, int max_enemy_shi
  * @param score le score du joueur
  */
 void write_score(const char * file_name, const char * player_name, float score);
+
+
+typedef struct score{
+    char player_name[32];
+    float score;
+} Score;
+
+/**
+ * @brief Lit les scores dans un fichier
+ * 
+ * @param file le fichier à lire
+ * @param size la taille du tableau de scores
+ * @return Score* le tableau de scores
+ */
+Score * fread_score(const char * file, int * size);
 
 #endif

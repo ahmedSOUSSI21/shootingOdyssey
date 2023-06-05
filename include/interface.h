@@ -6,6 +6,7 @@
 #include <MLV/MLV_all.h>
 #include "../include/ship.h"
 #include "../include/bullet.h"
+#include "../include/in_out.h"
 
 #define MAX_BULLETS 2048
 #define WIDTH 320
@@ -159,5 +160,16 @@ void free_map(ImageWithPosition ** small_stars, ImageWithPosition ** big_stars, 
  * @return char* le nom du joueur
  */
 char * get_player_name();
+
+/**
+ * @brief affiche le score et le top 10
+ * 
+ * @param score le score du joueur
+ * @param enemy_killed le nombre d'ennemis tués
+ * @param time_played le temps de jeu
+ * @param mouseX position x de la souris
+ * @param mouseY position y de la souris
+ */
+int display_game_over(float score, int enemy_killed, float time_played, int mouseX, int mouseY, Score * scores, int size, MLV_Image * background);
 
 #endif
