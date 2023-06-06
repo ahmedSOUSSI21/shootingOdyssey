@@ -13,11 +13,6 @@
 #define MAX_ANIMATIONS 2048
 #define MAX_ENEMY_SHIPS 100
 
-float player_score;
-int enemy_killed;
-float time_played;
-MLV_Sound * explosion_sound;
-
 void move_bullets(BulletWithImage ** bullets){
     int i;
     for(i = 0; i < MAX_BULLETS; i++){
@@ -77,7 +72,7 @@ void add_animation(Animation ** animations, Animation * animation){
     }
 }
 
-void enemy_collision(BulletWithImage ** bullets, Ship ** enemy_ships, Animation ** animations){
+void enemy_collision(BulletWithImage ** bullets, Ship ** enemy_ships, Animation ** animations, int * enemy_killed, float * player_score, MLV_Sound * explosion_sound){
     int i, j;
     for(i = 0; i < MAX_BULLETS; i++){
         if(bullets[i]!= NULL){
@@ -91,14 +86,14 @@ void enemy_collision(BulletWithImage ** bullets, Ship ** enemy_ships, Animation 
                             MLV_play_sound(explosion_sound, 1.0);
                             if(enemy_ships[j]->pv <= 0){
                                 if(enemy_ships[j]->type == NORMAL_ENEMY_SHIP_TYPE){
-                                    player_score += 100;
+                                    *player_score += 100;
                                 }
                                 if(enemy_ships[j]->type == FLASHING_ENEMY_SHIP_TYPE){
-                                    player_score += 150;
+                                    *player_score += 150;
                                 }
                                 free_ship(enemy_ships[j]);
                                 enemy_ships[j] = NULL;
-                                enemy_killed++;
+                                *enemy_killed += 1;
                             }
                             remove_bullet(bullets, i);
                         }
@@ -113,7 +108,7 @@ int distance(Ship * ship, Ship * ship2){
     return sqrt(pow(ship->x - ship2->x, 2) + pow(ship->y - ship2->y, 2));
 }
 
-void player_collision(BulletWithImage ** bullets, Ship * player_ship, Ship** enemy_ships, Animation ** animations){
+void player_collision(BulletWithImage ** bullets, Ship * player_ship, Ship** enemy_ships, Animation ** animations, int * enemy_killed, float * player_score, MLV_Sound * explosion_sound){
     int i;
     for(i = 0; i < MAX_BULLETS; i++){
         if(bullets[i]!= NULL){
@@ -137,7 +132,8 @@ void player_collision(BulletWithImage ** bullets, Ship * player_ship, Ship** ene
                 if(enemy_ships[i]->pv <= 0){
                     free_ship(enemy_ships[i]);
                     enemy_ships[i] = NULL;
-                    enemy_killed++;
+                    *enemy_killed += 1;
+                    *player_score += 50;
                 }
             }
         }
@@ -232,6 +228,18 @@ void free_all_enemies(Ship ** enemy_ships){
     }
 }
 
+void remove_outscreen_normal(Ship ** enemy_ships){
+    int i;
+    for(i = 0; i < MAX_ENEMY_SHIPS; i++){
+        if(enemy_ships[i] != NULL){
+            if(enemy_ships[i]->y >= (HEIGHT - SHIP_HEIGHT)){
+                free_ship(enemy_ships[i]);
+                enemy_ships[i] = NULL;
+            }
+        }
+    }
+}
+
 void treat_event(Ship * player_ship, BulletWithImage ** bullets, int * quit, int * move_left, int * move_right, int * move_up, int * move_down, int * fire_clicked){
     MLV_Keyboard_button key_sym;
     MLV_Button_state state;
@@ -271,9 +279,9 @@ void gameloop(){
     Ship * enemy_ships[MAX_ENEMY_SHIPS] = {NULL};
     BulletWithImage * bullets[MAX_BULLETS] = {NULL};
     MLV_Music* music;
-    player_score = 0.0;
-    enemy_killed = 0;
-    time_played = 0;
+    float player_score = 0.0;
+    int enemy_killed = 0;
+    float time_played = 0.0;
     int quit = 0, move_left = 0, move_right = 0, move_up = 0, move_down = 0, fire_clicked = 0;
     MLV_Image * player_image;
     MLV_Image * enemy_image;
@@ -288,7 +296,7 @@ void gameloop(){
     struct timespec new, last;
     init_map(small_stars, big_stars, &moon);
     music = MLV_load_music("./data/sounds/menu-sound.ogg");
-    explosion_sound = MLV_load_sound("./data/sounds/explosion.wav");
+    MLV_Sound * explosion_sound = MLV_load_sound("./data/sounds/explosion.wav");
     MLV_play_music(music,1.0, -1);
     player_image = MLV_load_image("./data/images/ship.png");
     player_ship = init_player_ship(150, 600, 5);
@@ -301,7 +309,7 @@ void gameloop(){
         current_time = MLV_get_time();
         deltaTime = (float)(current_time - previous_time);
         player_score += deltaTime/100;
-        time_played += deltaTime/CLOCKS_PER_SEC;
+        time_played += deltaTime/1000;
         player_ship->last_fire += deltaTime;
         if(player_ship->ammo <= 0){
             if(reload == 0.0)   add_animation(animations, init_reloading_animation(WIDTH/2, HEIGHT/2));
@@ -311,9 +319,10 @@ void gameloop(){
                 reload = 0.0;
             }
         }
+        
         add_all_deltaTime(enemy_ships, deltaTime);
-        enemy_collision(bullets, enemy_ships, animations);
-        player_collision(bullets, player_ship, enemy_ships, animations);
+        enemy_collision(bullets, enemy_ships, animations, &enemy_killed, &player_score, explosion_sound);
+        player_collision(bullets, player_ship, enemy_ships, animations, &enemy_killed, &player_score, explosion_sound);
         MLV_clear_window(MLV_COLOR_BLACK);
         clock_gettime(0, &last);
         display_map(small_stars, big_stars, moon);
@@ -328,6 +337,7 @@ void gameloop(){
         enemies_fire(enemy_ships, player_ship, bullets);
         move_bullets(bullets);
         remove_out_screen_bullets(bullets);
+        remove_outscreen_normal(enemy_ships);
         clock_gettime(0, &new);
         int accum = (new.tv_sec - last.tv_sec )+((new.tv_nsec - last.tv_nsec)/1000000000) ;
         if(accum < (1.0/60.0)){
