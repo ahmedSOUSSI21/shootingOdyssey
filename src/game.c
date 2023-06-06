@@ -240,6 +240,16 @@ void remove_outscreen_normal(Ship ** enemy_ships){
     }
 }
 
+int all_killed(Ship ** enemy_ships){
+    int i;
+    for(i = 0; i < MAX_ENEMY_SHIPS; i++){
+        if(enemy_ships[i] != NULL){
+            return 0;
+        }
+    }
+    return 1;
+}
+
 void treat_event(Ship * player_ship, BulletWithImage ** bullets, int * quit, int * move_left, int * move_right, int * move_up, int * move_down, int * fire_clicked){
     MLV_Keyboard_button key_sym;
     MLV_Button_state state;
@@ -303,8 +313,8 @@ void gameloop(){
     read_enemies("./data/files/enemies.txt", enemy_ships, MAX_ENEMY_SHIPS);
     enemy_image = MLV_load_image("./data/images/enemy_normal.png");
     enemy_image2 = MLV_load_image("./data/images/enemy_flashing.png");
-    while(!quit){
-        if(player_ship->pv <= 0) break;
+    while(1){
+        if(player_ship->pv <= 0 || all_killed(enemy_ships) || quit) break;
         previous_time = current_time;
         current_time = MLV_get_time();
         deltaTime = (float)(current_time - previous_time);
