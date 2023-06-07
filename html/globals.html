@@ -76,6 +76,7 @@ $(function() {
 <li>add_animation()&#160;:&#160;<a class="el" href="game_8c.html#a77cbcb6e9ddacda3c5a76fa882e42241">game.c</a></li>
 <li>add_bullet()&#160;:&#160;<a class="el" href="interface_8h.html#a5b1c7ce7df8350380083df24d83f158c">interface.h</a>, <a class="el" href="interface_8c.html#a5b1c7ce7df8350380083df24d83f158c">interface.c</a></li>
 <li>add_enemy()&#160;:&#160;<a class="el" href="game_8c.html#ad86c61e012c3d9112cbbc0b731df9c27">game.c</a></li>
+<li>all_killed()&#160;:&#160;<a class="el" href="game_8c.html#a60e79ee1f5457e031384b7d2202d6ace">game.c</a></li>
 <li>Animation&#160;:&#160;<a class="el" href="animations_8h.html#ac374c930594aa46ce7f34d2eec1d2cb4">animations.h</a></li>
 </ul>
 
@@ -101,6 +102,7 @@ $(function() {
 <li>display_credits()&#160;:&#160;<a class="el" href="menu_8h.html#a15a8e03de1f9f1a1354284381c238593">menu.h</a>, <a class="el" href="menu_8c.html#ac72df179fc33d54f256280ceb9a9ea2a">menu.c</a></li>
 <li>display_credits_box()&#160;:&#160;<a class="el" href="menu_8c.html#a1150130476c1a9e4fdeeaa6f2a522711">menu.c</a></li>
 <li>display_current_frame()&#160;:&#160;<a class="el" href="animations_8h.html#a5641fa3fdcb53b1578a12b38a6fa2396">animations.h</a>, <a class="el" href="animations_8c.html#a5641fa3fdcb53b1578a12b38a6fa2396">animations.c</a></li>
+<li>display_game_over()&#160;:&#160;<a class="el" href="interface_8h.html#ad14351637934a1b88e56643d9718d7d4">interface.h</a>, <a class="el" href="interface_8c.html#ad14351637934a1b88e56643d9718d7d4">interface.c</a></li>
 <li>display_map()&#160;:&#160;<a class="el" href="interface_8h.html#a72e4f6ee80d3006f687ae950466a2dd9">interface.h</a>, <a class="el" href="interface_8c.html#a72e4f6ee80d3006f687ae950466a2dd9">interface.c</a></li>
 <li>display_menu()&#160;:&#160;<a class="el" href="menu_8h.html#a20408647258cf04e9c71edb2cf7f0386">menu.h</a>, <a class="el" href="menu_8c.html#a20408647258cf04e9c71edb2cf7f0386">menu.c</a></li>
 <li>display_play_box()&#160;:&#160;<a class="el" href="menu_8c.html#accc175b5fefe326023b210368e356a1c">menu.c</a></li>
@@ -114,16 +116,16 @@ $(function() {
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
 <li>enemies_fire()&#160;:&#160;<a class="el" href="game_8c.html#a97fec9c14e275723b900f33dc2efa06e">game.c</a></li>
-<li>enemy_collision()&#160;:&#160;<a class="el" href="game_8c.html#a67d777195b3f22f07e6a94a1949c19de">game.c</a></li>
+<li>enemy_collision()&#160;:&#160;<a class="el" href="game_8c.html#ab11e4a94760569fe399123d67bf0479f">game.c</a></li>
 <li>enemy_fire()&#160;:&#160;<a class="el" href="ship_8h.html#a4cc39dc552c846d9277601f142a06721">ship.h</a>, <a class="el" href="ship_8c.html#a4cc39dc552c846d9277601f142a06721">ship.c</a></li>
 <li>enemy_fire_normal()&#160;:&#160;<a class="el" href="ship_8h.html#a928c431f7dc32bde3e328c1ce2bc8b99">ship.h</a>, <a class="el" href="ship_8c.html#a928c431f7dc32bde3e328c1ce2bc8b99">ship.c</a></li>
-<li>explosion_sound&#160;:&#160;<a class="el" href="game_8c.html#abf03af0ab6cfe92df86ab33c6ec308b4">game.c</a></li>
 </ul>
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
 <li>FLASHING_ENEMY_BULLET_TYPE&#160;:&#160;<a class="el" href="bullet_8h.html#ae759e055ceffb2462b48ee02f2e4ffc4">bullet.h</a></li>
 <li>FLASHING_ENEMY_SHIP_TYPE&#160;:&#160;<a class="el" href="ship_8h.html#a93928fd18dd4fc6e8856964a98288ae9">ship.h</a></li>
+<li>fread_score()&#160;:&#160;<a class="el" href="in__out_8h.html#af37836eccb948207ec46f8012ae914c9">in_out.h</a>, <a class="el" href="in__out_8c.html#af37836eccb948207ec46f8012ae914c9">in_out.c</a></li>
 <li>free_all_animations()&#160;:&#160;<a class="el" href="game_8c.html#a234ccaa5ae98a03853d3b023753bfa6d">game.c</a></li>
 <li>free_all_enemies()&#160;:&#160;<a class="el" href="game_8c.html#a5a5fbc1daae29a08ad0c71c0bb3d390b">game.c</a></li>
 <li>free_animation()&#160;:&#160;<a class="el" href="animations_8h.html#a400500a1dd3277c6a70a737596e01bbf">animations.h</a>, <a class="el" href="animations_8c.html#a400500a1dd3277c6a70a737596e01bbf">animations.c</a></li>
@@ -176,8 +178,10 @@ $(function() {
 <li>MAX_ANIMATIONS&#160;:&#160;<a class="el" href="game_8c.html#a99f9cfd68ef4237b568bda6e3e63312f">game.c</a></li>
 <li>MAX_BULLETS&#160;:&#160;<a class="el" href="interface_8h.html#a4331843c2698da5ccb18562eb1485681">interface.h</a></li>
 <li>MAX_ENEMY_SHIPS&#160;:&#160;<a class="el" href="game_8c.html#a1bc46190ffe67f528b448408a9f62ea7">game.c</a></li>
+<li>MAX_SCORES&#160;:&#160;<a class="el" href="in__out_8h.html#a85abf1c6889438cc50351afbacd7ff43">in_out.h</a></li>
 <li>MOON_IMAGE_HEIGHT&#160;:&#160;<a class="el" href="interface_8h.html#abebdef4ea1e081d598ed12436761cc34">interface.h</a></li>
 <li>MOON_IMAGE_WIDTH&#160;:&#160;<a class="el" href="interface_8h.html#ab1cf7dea7f7efb8cea939b5e35856650">interface.h</a></li>
+<li>more()&#160;:&#160;<a class="el" href="in__out_8c.html#a97c02092dc143755c9f24826ee34b849">in_out.c</a></li>
 <li>move_bullet()&#160;:&#160;<a class="el" href="bullet_8h.html#a6000e16064b04190151ad56d1e85c2d7">bullet.h</a>, <a class="el" href="bullet_8c.html#a6000e16064b04190151ad56d1e85c2d7">bullet.c</a></li>
 <li>move_bullets()&#160;:&#160;<a class="el" href="game_8h.html#a6015ea0cb519d975f4f53521c05e6485">game.h</a>, <a class="el" href="game_8c.html#a6015ea0cb519d975f4f53521c05e6485">game.c</a></li>
 <li>move_enemies()&#160;:&#160;<a class="el" href="game_8c.html#a525369a49c0620e806722268c6b105e8">game.c</a></li>
@@ -195,11 +199,10 @@ $(function() {
 <li>PI&#160;:&#160;<a class="el" href="ship_8h.html#a598a3330b3c21701223ee0ca14316eca">ship.h</a></li>
 <li>PLAY&#160;:&#160;<a class="el" href="menu_8h.html#a34deddb3d2e1791fd7ce5acc13ffc8df">menu.h</a></li>
 <li>PLAYER_BULLET_TYPE&#160;:&#160;<a class="el" href="bullet_8h.html#a03c65aebde84f4f75a3f6391a8162547">bullet.h</a></li>
-<li>player_collision()&#160;:&#160;<a class="el" href="game_8c.html#ad2e2564c3f6454f03f4672db6a7b64ac">game.c</a></li>
+<li>player_collision()&#160;:&#160;<a class="el" href="game_8c.html#ab2c103d5ead03ec408e721463eb0e434">game.c</a></li>
 <li>player_fire()&#160;:&#160;<a class="el" href="ship_8h.html#a4c9d7b0d0c0b3ce22ceb159bff17f7ef">ship.h</a>, <a class="el" href="ship_8c.html#a4c9d7b0d0c0b3ce22ceb159bff17f7ef">ship.c</a></li>
 <li>PLAYER_MINIMUM_RELOAD_TIME&#160;:&#160;<a class="el" href="ship_8h.html#af66de5882cb020c400f3976ecd4c3601">ship.h</a></li>
 <li>player_reload()&#160;:&#160;<a class="el" href="ship_8h.html#a480978842e6e0fc1a0af4721149fc039">ship.h</a>, <a class="el" href="ship_8c.html#a480978842e6e0fc1a0af4721149fc039">ship.c</a></li>
-<li>player_score&#160;:&#160;<a class="el" href="game_8c.html#a79c14182c2458c2c3520a199b0cc5d4c">game.c</a></li>
 <li>PLAYER_SHIP_TYPE&#160;:&#160;<a class="el" href="ship_8h.html#a7b2dcc10822783cecd0bf2eee38993bc">ship.h</a></li>
 </ul>
 
@@ -213,17 +216,21 @@ $(function() {
 <li>read_enemies()&#160;:&#160;<a class="el" href="in__out_8h.html#a16bae6185f00122d8e91ccf8d9b7558d">in_out.h</a>, <a class="el" href="in__out_8c.html#a16bae6185f00122d8e91ccf8d9b7558d">in_out.c</a></li>
 <li>remove_bullet()&#160;:&#160;<a class="el" href="interface_8h.html#a446a9d1b06314f6399af5035c0fc74c9">interface.h</a>, <a class="el" href="interface_8c.html#a446a9d1b06314f6399af5035c0fc74c9">interface.c</a></li>
 <li>remove_out_screen_bullets()&#160;:&#160;<a class="el" href="interface_8h.html#a58bc65d9121eb974ac5f810004589024">interface.h</a>, <a class="el" href="interface_8c.html#a58bc65d9121eb974ac5f810004589024">interface.c</a></li>
+<li>remove_outscreen_normal()&#160;:&#160;<a class="el" href="game_8c.html#a2acee234b7c490a7b94d39ea183b0eeb">game.c</a></li>
 <li>RIGHT&#160;:&#160;<a class="el" href="ship_8h.html#a80fb826a684cf3f0d306b22aa100ddac">ship.h</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>Score&#160;:&#160;<a class="el" href="in__out_8h.html#a6713cd83acee4d263623e703cc762efc">in_out.h</a></li>
+<li>selection_sort()&#160;:&#160;<a class="el" href="in__out_8c.html#a9eb4eaa5bd37b037b0b23841a900a1bd">in_out.c</a></li>
 <li>Ship&#160;:&#160;<a class="el" href="ship_8h.html#a849f9f27b921687e2c5360a2842d5827">ship.h</a></li>
 <li>SHIP_HEIGHT&#160;:&#160;<a class="el" href="ship_8h.html#a251cdb99b9005f34d584ac24b8452bb7">ship.h</a></li>
 <li>SHIP_WIDTH&#160;:&#160;<a class="el" href="ship_8h.html#ad7e4c7aba8d5d518124fe21389ddb5df">ship.h</a></li>
 <li>SOUND_DIR&#160;:&#160;<a class="el" href="interface_8h.html#a34faf9ba46fe9868f0acce685a57fdc8">interface.h</a></li>
 <li>STAR_IMAGE_HEIGHT&#160;:&#160;<a class="el" href="interface_8h.html#a1e0c3ba2e0dbc0b63a5216224a65d7f5">interface.h</a></li>
 <li>STAR_IMAGE_WIDTH&#160;:&#160;<a class="el" href="interface_8h.html#af4ded192fef211f688d9932ef47bd813">interface.h</a></li>
+<li>swap()&#160;:&#160;<a class="el" href="in__out_8c.html#a05c49e7740d36f4aa1dc0c17c23296a7">in_out.c</a></li>
 </ul>
 
 

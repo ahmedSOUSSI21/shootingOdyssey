@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../struct__animation.html#a5113959a7f2582cb2ba3c026aec32cff',1,'_animation::x()'],['../structbullet.html#a8aa2473ae3eecca4edc2456b0682314b',1,'bullet::x()'],['../struct__image__and__pos.html#acb01d30eb4755b0f131a80f83286c387',1,'_image_and_pos::x()'],['../structship.html#a9a2e3cbd628e8deacdf9e3df078f7bb5',1,'ship::x()']]]
+  ['y_0',['y',['../struct__animation.html#ad54fb1eda4bbfb34d90762ae57273d14',1,'_animation::y()'],['../structbullet.html#a4ae297548b93d952fc700f9d9761b794',1,'bullet::y()'],['../struct__image__and__pos.html#a786c1010b343b84f3418379ee1ed566a',1,'_image_and_pos::y()'],['../structship.html#a1747553bd2ad36d1a524787f8800c180',1,'ship::y()']]]
 ];

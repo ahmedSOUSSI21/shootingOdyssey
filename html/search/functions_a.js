@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['take_5fdamage_5ffrom_5fbullet_0',['take_damage_from_bullet',['../ship_8h.html#ac73c82a96d7068f50aae1e51c061bca2',1,'take_damage_from_bullet(Ship *ship, Bullet *bullet):&#160;ship.c'],['../ship_8c.html#ac73c82a96d7068f50aae1e51c061bca2',1,'take_damage_from_bullet(Ship *ship, Bullet *bullet):&#160;ship.c']]],
-  ['treat_5fevent_1',['treat_event',['../game_8c.html#ae3dbbbfcf26110f08d7d0cbd830a5133',1,'game.c']]]
+  ['selection_5fsort_0',['selection_sort',['../in__out_8c.html#a9eb4eaa5bd37b037b0b23841a900a1bd',1,'in_out.c']]],
+  ['swap_1',['swap',['../in__out_8c.html#a05c49e7740d36f4aa1dc0c17c23296a7',1,'in_out.c']]]
 ];

@@ -24,7 +24,12 @@ void read_enemies(const char * file_name, Ship ** enemy_ships, int max_enemy_shi
  */
 void write_score(const char * file_name, const char * player_name, float score);
 
-
+/**
+ * @brief écrit les scores dans un fichier
+ *
+ * @param player_name le nom du joueur
+* @param score le score du joueur
+ */
 typedef struct score{
     char player_name[32];
     float score;

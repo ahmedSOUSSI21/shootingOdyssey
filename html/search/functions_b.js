@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['write_5fscore_0',['write_score',['../in__out_8h.html#aa9e5f8cd720bec76246fd9d81a6dbe7d',1,'write_score(const char *file_name, const char *player_name, float score):&#160;in_out.c'],['../in__out_8c.html#aa9e5f8cd720bec76246fd9d81a6dbe7d',1,'write_score(const char *file_name, const char *player_name, float score):&#160;in_out.c']]]
+  ['take_5fdamage_5ffrom_5fbullet_0',['take_damage_from_bullet',['../ship_8h.html#ac73c82a96d7068f50aae1e51c061bca2',1,'take_damage_from_bullet(Ship *ship, Bullet *bullet):&#160;ship.c'],['../ship_8c.html#ac73c82a96d7068f50aae1e51c061bca2',1,'take_damage_from_bullet(Ship *ship, Bullet *bullet):&#160;ship.c']]],
+  ['treat_5fevent_1',['treat_event',['../game_8c.html#ae3dbbbfcf26110f08d7d0cbd830a5133',1,'game.c']]]
 ];

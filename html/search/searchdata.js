@@ -2,11 +2,12 @@ var indexSectionsWithContent =
 {
   0: "_abcdefghilmnpqrstuwxy",
   1: "_abs",
-  2: "abgims",
-  3: "acdefgimprtw",
-  4: "abdeilnpstwxy",
+  2: "abgimrs",
+  3: "acdefgimprstw",
+  4: "abdilnpstwxy",
   5: "abis",
-  6: "bcdfhilmnpqrsuw"
+  6: "bcdfhilmnpqrsuw",
+  7: "a"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "typedefs",
-  6: "defines"
+  6: "defines",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "Fonctions",
   4: "Variables",
   5: "Définitions de type",
-  6: "Macros"
+  6: "Macros",
+  7: "Pages"
 };
 
