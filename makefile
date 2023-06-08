@@ -34,3 +34,28 @@ main: bullet.o ship.o in_out.o interface.o animations.o game.o menu.o main.o
 clean:
 	rm -rf *.o
 	rm main
+#
+#CC = gcc
+#CFLAGS = -Wall -Werror
+#SRC_DIR = src
+#OBJ_DIR = obj
+#EXECUTABLE = TP10
+#
+## Liste des fichiers source
+#SRCS = $(wildcard $(SRC_DIR)/*.c)
+#
+## Génère le nom des fichiers objets à partir des fichiers sources
+#OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
+#
+#.PHONY: all clean
+#
+#all: $(EXECUTABLE)
+#
+#$(EXECUTABLE): $(OBJS)
+#	$(CC) $(CFLAGS) $^ -o $@
+#
+#$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+#	$(CC) $(CFLAGS) -c $< -o $@
+#
+#clean:
+#	rm -f $(OBJ_DIR)/*.o $(EXECUTABLE)
