@@ -7,11 +7,11 @@
 #define MAX_SCORES 1024
 
 /**
-* @brief Reads the player's ship from a file
+* @brief Lit les ennemis depuis un fichier
 
-* @param file_name The name of the file to read from
-* @param ennemy_ships The array of ennemy ships
-* @param max_enemy_ships The maximum number of ennemy ships
+* @param file_name Le chemin vers le fichier
+* @param ennemy_ships Le tableau de vaisseaux ennemis
+* @param max_enemy_ships La taille du tableau de vaisseaux ennemis
 */
 void read_enemies(const char * file_name, Ship ** enemy_ships, int max_enemy_ships);
 
@@ -25,7 +25,7 @@ void read_enemies(const char * file_name, Ship ** enemy_ships, int max_enemy_shi
 void write_score(const char * file_name, const char * player_name, float score);
 
 /**
- * @brief écrit les scores dans un fichier
+ * @brief stcuture de score
  *
  * @param player_name le nom du joueur
 * @param score le score du joueur

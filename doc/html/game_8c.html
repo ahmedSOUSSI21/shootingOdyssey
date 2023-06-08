@@ -1,0 +1,721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shooting Odyssey: Référence du fichier src/game.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shooting Odyssey
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier game.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="ship_8h_source.html">../include/ship.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bullet_8h_source.html">../include/bullet.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="interface_8h_source.html">../include/interface.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="game_8h_source.html">../include/game.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="animations_8h_source.html">../include/animations.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="in__out_8h_source.html">../include/in_out.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a99f9cfd68ef4237b568bda6e3e63312f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a99f9cfd68ef4237b568bda6e3e63312f">MAX_ANIMATIONS</a>&#160;&#160;&#160;2048</td></tr>
+<tr class="separator:a99f9cfd68ef4237b568bda6e3e63312f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc46190ffe67f528b448408a9f62ea7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a1bc46190ffe67f528b448408a9f62ea7">MAX_ENEMY_SHIPS</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a1bc46190ffe67f528b448408a9f62ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a6015ea0cb519d975f4f53521c05e6485"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a6015ea0cb519d975f4f53521c05e6485">move_bullets</a> (<a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **bullets)</td></tr>
+<tr class="memdesc:a6015ea0cb519d975f4f53521c05e6485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet de bouger toutes les balles du jeu.  <a href="game_8c.html#a6015ea0cb519d975f4f53521c05e6485">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6015ea0cb519d975f4f53521c05e6485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbc628a384ba0bd9f1cb4ca08174cfc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#adbc628a384ba0bd9f1cb4ca08174cfc2">free_bullets</a> (<a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **bullets)</td></tr>
+<tr class="separator:adbc628a384ba0bd9f1cb4ca08174cfc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e018de0fa793ce63a069787e21cbf12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a3e018de0fa793ce63a069787e21cbf12">display_animations</a> (<a class="el" href="structAnimation.html">Animation</a> **animations, float timeDelta)</td></tr>
+<tr class="separator:a3e018de0fa793ce63a069787e21cbf12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a234ccaa5ae98a03853d3b023753bfa6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a234ccaa5ae98a03853d3b023753bfa6d">free_all_animations</a> (<a class="el" href="structAnimation.html">Animation</a> **animations)</td></tr>
+<tr class="separator:a234ccaa5ae98a03853d3b023753bfa6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77cbcb6e9ddacda3c5a76fa882e42241"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a77cbcb6e9ddacda3c5a76fa882e42241">add_animation</a> (<a class="el" href="structAnimation.html">Animation</a> **animations, <a class="el" href="structAnimation.html">Animation</a> *animation)</td></tr>
+<tr class="separator:a77cbcb6e9ddacda3c5a76fa882e42241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11e4a94760569fe399123d67bf0479f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#ab11e4a94760569fe399123d67bf0479f">enemy_collision</a> (<a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **bullets, <a class="el" href="structShip.html">Ship</a> **enemy_ships, <a class="el" href="structAnimation.html">Animation</a> **animations, int *enemy_killed, float *player_score, MLV_Sound *explosion_sound)</td></tr>
+<tr class="separator:ab11e4a94760569fe399123d67bf0479f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a62fda09ed524f11cdb9ee809701f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a15a62fda09ed524f11cdb9ee809701f7">distance</a> (<a class="el" href="structShip.html">Ship</a> *<a class="el" href="structship.html">ship</a>, <a class="el" href="structShip.html">Ship</a> *ship2)</td></tr>
+<tr class="separator:a15a62fda09ed524f11cdb9ee809701f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2c103d5ead03ec408e721463eb0e434"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#ab2c103d5ead03ec408e721463eb0e434">player_collision</a> (<a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **bullets, <a class="el" href="structShip.html">Ship</a> *player_ship, <a class="el" href="structShip.html">Ship</a> **enemy_ships, <a class="el" href="structAnimation.html">Animation</a> **animations, int *enemy_killed, float *player_score, MLV_Sound *explosion_sound)</td></tr>
+<tr class="separator:ab2c103d5ead03ec408e721463eb0e434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f6447dbabab5cd1f291273f001bdba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a92f6447dbabab5cd1f291273f001bdba">add_all_deltaTime</a> (<a class="el" href="structShip.html">Ship</a> **enemy_ships, float deltaTime)</td></tr>
+<tr class="separator:a92f6447dbabab5cd1f291273f001bdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad86c61e012c3d9112cbbc0b731df9c27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#ad86c61e012c3d9112cbbc0b731df9c27">add_enemy</a> (<a class="el" href="structShip.html">Ship</a> **enemy_ships, <a class="el" href="structShip.html">Ship</a> *new_enemy)</td></tr>
+<tr class="separator:ad86c61e012c3d9112cbbc0b731df9c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a525369a49c0620e806722268c6b105e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a525369a49c0620e806722268c6b105e8">move_enemies</a> (<a class="el" href="structShip.html">Ship</a> **enemy_ships, <a class="el" href="structShip.html">Ship</a> *player_ship)</td></tr>
+<tr class="separator:a525369a49c0620e806722268c6b105e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97fec9c14e275723b900f33dc2efa06e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a97fec9c14e275723b900f33dc2efa06e">enemies_fire</a> (<a class="el" href="structShip.html">Ship</a> **enemy_ships, <a class="el" href="structShip.html">Ship</a> *player_ship, <a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **bullets)</td></tr>
+<tr class="separator:a97fec9c14e275723b900f33dc2efa06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb2351cae9fad328437f71490c627638"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#abb2351cae9fad328437f71490c627638">display_all_enemies</a> (<a class="el" href="structShip.html">Ship</a> **enemy_ships, MLV_Image *normal_image, MLV_Image *flashing_image)</td></tr>
+<tr class="separator:abb2351cae9fad328437f71490c627638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a5fbc1daae29a08ad0c71c0bb3d390b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a5a5fbc1daae29a08ad0c71c0bb3d390b">free_all_enemies</a> (<a class="el" href="structShip.html">Ship</a> **enemy_ships)</td></tr>
+<tr class="separator:a5a5fbc1daae29a08ad0c71c0bb3d390b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2acee234b7c490a7b94d39ea183b0eeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a2acee234b7c490a7b94d39ea183b0eeb">remove_outscreen_normal</a> (<a class="el" href="structShip.html">Ship</a> **enemy_ships)</td></tr>
+<tr class="separator:a2acee234b7c490a7b94d39ea183b0eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e79ee1f5457e031384b7d2202d6ace"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a60e79ee1f5457e031384b7d2202d6ace">all_killed</a> (<a class="el" href="structShip.html">Ship</a> **enemy_ships)</td></tr>
+<tr class="separator:a60e79ee1f5457e031384b7d2202d6ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3dbbbfcf26110f08d7d0cbd830a5133"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#ae3dbbbfcf26110f08d7d0cbd830a5133">treat_event</a> (<a class="el" href="structShip.html">Ship</a> *player_ship, <a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **bullets, int *quit, int *move_left, int *move_right, int *move_up, int *move_down, int *fire_clicked)</td></tr>
+<tr class="separator:ae3dbbbfcf26110f08d7d0cbd830a5133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74fbbfe2f49cdfca36f03b640a91aef2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a74fbbfe2f49cdfca36f03b640a91aef2">gameloop</a> ()</td></tr>
+<tr class="memdesc:a74fbbfe2f49cdfca36f03b640a91aef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boucle du jeu.  <a href="game_8c.html#a74fbbfe2f49cdfca36f03b640a91aef2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a74fbbfe2f49cdfca36f03b640a91aef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="a99f9cfd68ef4237b568bda6e3e63312f" name="a99f9cfd68ef4237b568bda6e3e63312f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f9cfd68ef4237b568bda6e3e63312f">&#9670;&nbsp;</a></span>MAX_ANIMATIONS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_ANIMATIONS&#160;&#160;&#160;2048</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bc46190ffe67f528b448408a9f62ea7" name="a1bc46190ffe67f528b448408a9f62ea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc46190ffe67f528b448408a9f62ea7">&#9670;&nbsp;</a></span>MAX_ENEMY_SHIPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_ENEMY_SHIPS&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a92f6447dbabab5cd1f291273f001bdba" name="a92f6447dbabab5cd1f291273f001bdba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f6447dbabab5cd1f291273f001bdba">&#9670;&nbsp;</a></span>add_all_deltaTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_all_deltaTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> **&#160;</td>
+          <td class="paramname"><em>enemy_ships</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>deltaTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77cbcb6e9ddacda3c5a76fa882e42241" name="a77cbcb6e9ddacda3c5a76fa882e42241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77cbcb6e9ddacda3c5a76fa882e42241">&#9670;&nbsp;</a></span>add_animation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_animation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structAnimation.html">Animation</a> **&#160;</td>
+          <td class="paramname"><em>animations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structAnimation.html">Animation</a> *&#160;</td>
+          <td class="paramname"><em>animation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad86c61e012c3d9112cbbc0b731df9c27" name="ad86c61e012c3d9112cbbc0b731df9c27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad86c61e012c3d9112cbbc0b731df9c27">&#9670;&nbsp;</a></span>add_enemy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_enemy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> **&#160;</td>
+          <td class="paramname"><em>enemy_ships</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>new_enemy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60e79ee1f5457e031384b7d2202d6ace" name="a60e79ee1f5457e031384b7d2202d6ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e79ee1f5457e031384b7d2202d6ace">&#9670;&nbsp;</a></span>all_killed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int all_killed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> **&#160;</td>
+          <td class="paramname"><em>enemy_ships</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb2351cae9fad328437f71490c627638" name="abb2351cae9fad328437f71490c627638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb2351cae9fad328437f71490c627638">&#9670;&nbsp;</a></span>display_all_enemies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_all_enemies </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> **&#160;</td>
+          <td class="paramname"><em>enemy_ships</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Image *&#160;</td>
+          <td class="paramname"><em>normal_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Image *&#160;</td>
+          <td class="paramname"><em>flashing_image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e018de0fa793ce63a069787e21cbf12" name="a3e018de0fa793ce63a069787e21cbf12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e018de0fa793ce63a069787e21cbf12">&#9670;&nbsp;</a></span>display_animations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_animations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structAnimation.html">Animation</a> **&#160;</td>
+          <td class="paramname"><em>animations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeDelta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15a62fda09ed524f11cdb9ee809701f7" name="a15a62fda09ed524f11cdb9ee809701f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15a62fda09ed524f11cdb9ee809701f7">&#9670;&nbsp;</a></span>distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int distance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97fec9c14e275723b900f33dc2efa06e" name="a97fec9c14e275723b900f33dc2efa06e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97fec9c14e275723b900f33dc2efa06e">&#9670;&nbsp;</a></span>enemies_fire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enemies_fire </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> **&#160;</td>
+          <td class="paramname"><em>enemy_ships</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>player_ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **&#160;</td>
+          <td class="paramname"><em>bullets</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab11e4a94760569fe399123d67bf0479f" name="ab11e4a94760569fe399123d67bf0479f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab11e4a94760569fe399123d67bf0479f">&#9670;&nbsp;</a></span>enemy_collision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void enemy_collision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **&#160;</td>
+          <td class="paramname"><em>bullets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> **&#160;</td>
+          <td class="paramname"><em>enemy_ships</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structAnimation.html">Animation</a> **&#160;</td>
+          <td class="paramname"><em>animations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>enemy_killed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>player_score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Sound *&#160;</td>
+          <td class="paramname"><em>explosion_sound</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a234ccaa5ae98a03853d3b023753bfa6d" name="a234ccaa5ae98a03853d3b023753bfa6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a234ccaa5ae98a03853d3b023753bfa6d">&#9670;&nbsp;</a></span>free_all_animations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_all_animations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structAnimation.html">Animation</a> **&#160;</td>
+          <td class="paramname"><em>animations</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a5fbc1daae29a08ad0c71c0bb3d390b" name="a5a5fbc1daae29a08ad0c71c0bb3d390b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5fbc1daae29a08ad0c71c0bb3d390b">&#9670;&nbsp;</a></span>free_all_enemies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_all_enemies </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> **&#160;</td>
+          <td class="paramname"><em>enemy_ships</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbc628a384ba0bd9f1cb4ca08174cfc2" name="adbc628a384ba0bd9f1cb4ca08174cfc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbc628a384ba0bd9f1cb4ca08174cfc2">&#9670;&nbsp;</a></span>free_bullets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_bullets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **&#160;</td>
+          <td class="paramname"><em>bullets</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74fbbfe2f49cdfca36f03b640a91aef2" name="a74fbbfe2f49cdfca36f03b640a91aef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74fbbfe2f49cdfca36f03b640a91aef2">&#9670;&nbsp;</a></span>gameloop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gameloop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Boucle du jeu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">void</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6015ea0cb519d975f4f53521c05e6485" name="a6015ea0cb519d975f4f53521c05e6485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6015ea0cb519d975f4f53521c05e6485">&#9670;&nbsp;</a></span>move_bullets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_bullets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **&#160;</td>
+          <td class="paramname"><em>bullets</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui permet de bouger toutes les balles du jeu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bullets</td><td>tableau de balles </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a525369a49c0620e806722268c6b105e8" name="a525369a49c0620e806722268c6b105e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a525369a49c0620e806722268c6b105e8">&#9670;&nbsp;</a></span>move_enemies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_enemies </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> **&#160;</td>
+          <td class="paramname"><em>enemy_ships</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>player_ship</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2c103d5ead03ec408e721463eb0e434" name="ab2c103d5ead03ec408e721463eb0e434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2c103d5ead03ec408e721463eb0e434">&#9670;&nbsp;</a></span>player_collision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void player_collision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **&#160;</td>
+          <td class="paramname"><em>bullets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>player_ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> **&#160;</td>
+          <td class="paramname"><em>enemy_ships</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structAnimation.html">Animation</a> **&#160;</td>
+          <td class="paramname"><em>animations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>enemy_killed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>player_score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Sound *&#160;</td>
+          <td class="paramname"><em>explosion_sound</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2acee234b7c490a7b94d39ea183b0eeb" name="a2acee234b7c490a7b94d39ea183b0eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2acee234b7c490a7b94d39ea183b0eeb">&#9670;&nbsp;</a></span>remove_outscreen_normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove_outscreen_normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> **&#160;</td>
+          <td class="paramname"><em>enemy_ships</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3dbbbfcf26110f08d7d0cbd830a5133" name="ae3dbbbfcf26110f08d7d0cbd830a5133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3dbbbfcf26110f08d7d0cbd830a5133">&#9670;&nbsp;</a></span>treat_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void treat_event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>player_ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="interface_8h.html#a75ed681327b5763c40051536784ccb9f">BulletWithImage</a> **&#160;</td>
+          <td class="paramname"><em>bullets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>quit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>move_left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>move_right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>move_up</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>move_down</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>fire_clicked</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

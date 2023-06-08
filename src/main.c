@@ -16,6 +16,9 @@ int main(int argc, char * argv[]){
     MLV_Music * menu_music = MLV_load_music("./data/sounds/menu-principal.mp3");
     MLV_play_music(menu_music, 1.0, -1);
     MLV_Image * background_image = MLV_load_image("./data/images/credits.png");
+    MLV_Image * zqsd = MLV_load_image("./data/images/zqsd.png");
+    MLV_Image * space = MLV_load_image("./data/images/space.png");
+
     int choice = display_menu(background_image);
     
     while(choice != QUIT){
@@ -34,6 +37,9 @@ int main(int argc, char * argv[]){
             MLV_play_music(menu_music, 1.0, -1);
             choice = BACK_TO_MENU;
         }
+        if(choice == HOW_TO_PLAY){
+            choice = display_how_to_play(background_image, zqsd, space);
+        }
         MLV_actualise_window();
     }
 
@@ -41,6 +47,8 @@ int main(int argc, char * argv[]){
     MLV_free_music(menu_music);
     MLV_free_audio();
     MLV_free_image(background_image);
+    MLV_free_image(zqsd);
+    MLV_free_image(space);
     MLV_free_window();
     return 0;
 }

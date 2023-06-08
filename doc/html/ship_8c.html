@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Shooting Odyssey: Référence du fichier src/ship.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Shooting Odyssey
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier ship.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="ship_8h_source.html">../include/ship.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bullet_8h_source.html">../include/bullet.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a03ad86590a05363208c9a11f896f0f3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structShip.html">Ship</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#a03ad86590a05363208c9a11f896f0f3c">init_player_ship</a> (int x, int y, int speed)</td></tr>
+<tr class="memdesc:a03ad86590a05363208c9a11f896f0f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialise le vaissau du joueur  <a href="ship_8c.html#a03ad86590a05363208c9a11f896f0f3c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a03ad86590a05363208c9a11f896f0f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480978842e6e0fc1a0af4721149fc039"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#a480978842e6e0fc1a0af4721149fc039">player_reload</a> (<a class="el" href="structShip.html">Ship</a> *<a class="el" href="structship.html">ship</a>)</td></tr>
+<tr class="memdesc:a480978842e6e0fc1a0af4721149fc039"><td class="mdescLeft">&#160;</td><td class="mdescRight">recharge les balles du vaissau  <a href="ship_8c.html#a480978842e6e0fc1a0af4721149fc039">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a480978842e6e0fc1a0af4721149fc039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7020c239d70374214f111dc4de3f2eba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structShip.html">Ship</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#a7020c239d70374214f111dc4de3f2eba">init_flashing_ship</a> (int x, int y, int speed)</td></tr>
+<tr class="memdesc:a7020c239d70374214f111dc4de3f2eba"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialise le vaissau d'un flashing enemy  <a href="ship_8c.html#a7020c239d70374214f111dc4de3f2eba">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7020c239d70374214f111dc4de3f2eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbfdd223e0d8cd4802ae6fa3413cfa36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structShip.html">Ship</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#adbfdd223e0d8cd4802ae6fa3413cfa36">init_normal_enemy_ship</a> (int x, int y, int speed)</td></tr>
+<tr class="memdesc:adbfdd223e0d8cd4802ae6fa3413cfa36"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialise le vaissau d'un normal enemy  <a href="ship_8c.html#adbfdd223e0d8cd4802ae6fa3413cfa36">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adbfdd223e0d8cd4802ae6fa3413cfa36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa4342dcbc509664f9ec47f75f903f7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#afa4342dcbc509664f9ec47f75f903f7a">free_ship</a> (<a class="el" href="structShip.html">Ship</a> *<a class="el" href="structship.html">ship</a>)</td></tr>
+<tr class="memdesc:afa4342dcbc509664f9ec47f75f903f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libère toute la mémoire occupée par le vaissau.  <a href="ship_8c.html#afa4342dcbc509664f9ec47f75f903f7a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afa4342dcbc509664f9ec47f75f903f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55daea13f4b698a7f93df508547759e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#a55daea13f4b698a7f93df508547759e4">move_ship</a> (<a class="el" href="structShip.html">Ship</a> *<a class="el" href="structship.html">ship</a>, int direction, int width, int height)</td></tr>
+<tr class="memdesc:a55daea13f4b698a7f93df508547759e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">déplace le vaissau en se basant sur sa vitesse et la direction passée en argument  <a href="ship_8c.html#a55daea13f4b698a7f93df508547759e4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a55daea13f4b698a7f93df508547759e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c9d7b0d0c0b3ce22ceb159bff17f7ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBullet.html">Bullet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#a4c9d7b0d0c0b3ce22ceb159bff17f7ef">player_fire</a> (<a class="el" href="structShip.html">Ship</a> *<a class="el" href="structship.html">ship</a>)</td></tr>
+<tr class="memdesc:a4c9d7b0d0c0b3ce22ceb159bff17f7ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enlève une balle du vaissau et la renvoie.  <a href="ship_8c.html#a4c9d7b0d0c0b3ce22ceb159bff17f7ef">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4c9d7b0d0c0b3ce22ceb159bff17f7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80db7941eddebcd789b836340af483a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#ae80db7941eddebcd789b836340af483a">calculate_angle</a> (<a class="el" href="structShip.html">Ship</a> *<a class="el" href="structship.html">ship</a>, <a class="el" href="structShip.html">Ship</a> *player_ship)</td></tr>
+<tr class="separator:ae80db7941eddebcd789b836340af483a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc39dc552c846d9277601f142a06721"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBullet.html">Bullet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#a4cc39dc552c846d9277601f142a06721">enemy_fire</a> (<a class="el" href="structShip.html">Ship</a> *<a class="el" href="structship.html">ship</a>, <a class="el" href="structShip.html">Ship</a> *player_ship)</td></tr>
+<tr class="memdesc:a4cc39dc552c846d9277601f142a06721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enlève une balle du vaissau et la renvoie.  <a href="ship_8c.html#a4cc39dc552c846d9277601f142a06721">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4cc39dc552c846d9277601f142a06721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a928c431f7dc32bde3e328c1ce2bc8b99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structBullet.html">Bullet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#a928c431f7dc32bde3e328c1ce2bc8b99">enemy_fire_normal</a> (<a class="el" href="structShip.html">Ship</a> *<a class="el" href="structship.html">ship</a>)</td></tr>
+<tr class="memdesc:a928c431f7dc32bde3e328c1ce2bc8b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enlève une balle du vaissau et la renvoie.  <a href="ship_8c.html#a928c431f7dc32bde3e328c1ce2bc8b99">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a928c431f7dc32bde3e328c1ce2bc8b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac73c82a96d7068f50aae1e51c061bca2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#ac73c82a96d7068f50aae1e51c061bca2">take_damage_from_bullet</a> (<a class="el" href="structShip.html">Ship</a> *<a class="el" href="structship.html">ship</a>, <a class="el" href="structBullet.html">Bullet</a> *<a class="el" href="structbullet.html">bullet</a>)</td></tr>
+<tr class="memdesc:ac73c82a96d7068f50aae1e51c061bca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Décremente les pv du vaissau de la valeur de damage de la balle.  <a href="ship_8c.html#ac73c82a96d7068f50aae1e51c061bca2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac73c82a96d7068f50aae1e51c061bca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56209d2ca0b48710edee88e8dabb51d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ship_8c.html#ac56209d2ca0b48710edee88e8dabb51d">damage_between_ships</a> (<a class="el" href="structShip.html">Ship</a> *<a class="el" href="structship.html">ship</a>, <a class="el" href="structShip.html">Ship</a> *ship2)</td></tr>
+<tr class="separator:ac56209d2ca0b48710edee88e8dabb51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ae80db7941eddebcd789b836340af483a" name="ae80db7941eddebcd789b836340af483a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae80db7941eddebcd789b836340af483a">&#9670;&nbsp;</a></span>calculate_angle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float calculate_angle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>player_ship</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac56209d2ca0b48710edee88e8dabb51d" name="ac56209d2ca0b48710edee88e8dabb51d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac56209d2ca0b48710edee88e8dabb51d">&#9670;&nbsp;</a></span>damage_between_ships()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void damage_between_ships </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ship</td><td></td></tr>
+    <tr><td class="paramname">ship2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4cc39dc552c846d9277601f142a06721" name="a4cc39dc552c846d9277601f142a06721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc39dc552c846d9277601f142a06721">&#9670;&nbsp;</a></span>enemy_fire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structBullet.html">Bullet</a> * enemy_fire </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>player_ship</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enlève une balle du vaissau et la renvoie. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ship</td><td>Le vaissau sensé tirer la balle </td></tr>
+    <tr><td class="paramname">player_ship</td><td>Le vaissau du joueur (pour pouvoir tirer de balles pouvant suivre le joueur) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Bullet* la balle tirée </dd></dl>
+
+</div>
+</div>
+<a id="a928c431f7dc32bde3e328c1ce2bc8b99" name="a928c431f7dc32bde3e328c1ce2bc8b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a928c431f7dc32bde3e328c1ce2bc8b99">&#9670;&nbsp;</a></span>enemy_fire_normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structBullet.html">Bullet</a> * enemy_fire_normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enlève une balle du vaissau et la renvoie. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ship</td><td>Le vaissau sensé tirer la balle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Bullet* la balle tirée </dd></dl>
+
+</div>
+</div>
+<a id="afa4342dcbc509664f9ec47f75f903f7a" name="afa4342dcbc509664f9ec47f75f903f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa4342dcbc509664f9ec47f75f903f7a">&#9670;&nbsp;</a></span>free_ship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_ship </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libère toute la mémoire occupée par le vaissau. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ship</td><td>Le vaissau dont il faut libérer la mémoire </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7020c239d70374214f111dc4de3f2eba" name="a7020c239d70374214f111dc4de3f2eba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7020c239d70374214f111dc4de3f2eba">&#9670;&nbsp;</a></span>init_flashing_ship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structShip.html">Ship</a> * init_flashing_ship </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialise le vaissau d'un flashing enemy </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>position x du vaissau de l'ennemi </td></tr>
+    <tr><td class="paramname">y</td><td>position y du vaissau de l'ennemi </td></tr>
+    <tr><td class="paramname">speed</td><td>la vitesse de déplacement du vaissau de l'ennemi </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ship* le vaissau de l'ennemi initialisé avec les paramètres passés en argument </dd></dl>
+
+</div>
+</div>
+<a id="adbfdd223e0d8cd4802ae6fa3413cfa36" name="adbfdd223e0d8cd4802ae6fa3413cfa36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbfdd223e0d8cd4802ae6fa3413cfa36">&#9670;&nbsp;</a></span>init_normal_enemy_ship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structShip.html">Ship</a> * init_normal_enemy_ship </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialise le vaissau d'un normal enemy </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>position x du vaissau de l'ennemi </td></tr>
+    <tr><td class="paramname">y</td><td>position y du vaissau de l'ennemi </td></tr>
+    <tr><td class="paramname">speed</td><td>la vitesse de déplacement du vaissau de l'ennemi </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ship* le vaissau de l'ennemi initialisé avec les paramètres passés en argument </dd></dl>
+
+</div>
+</div>
+<a id="a03ad86590a05363208c9a11f896f0f3c" name="a03ad86590a05363208c9a11f896f0f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03ad86590a05363208c9a11f896f0f3c">&#9670;&nbsp;</a></span>init_player_ship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structShip.html">Ship</a> * init_player_ship </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialise le vaissau du joueur </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>position x du vaissau du joueur </td></tr>
+    <tr><td class="paramname">y</td><td>position y du vaissau du joueur </td></tr>
+    <tr><td class="paramname">speed</td><td>la vitesse de déplacement du vaissau du joueur </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ship* le vaissau du joueur initialisé avec les paramètres passés en argument </dd></dl>
+
+</div>
+</div>
+<a id="a55daea13f4b698a7f93df508547759e4" name="a55daea13f4b698a7f93df508547759e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55daea13f4b698a7f93df508547759e4">&#9670;&nbsp;</a></span>move_ship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_ship </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>déplace le vaissau en se basant sur sa vitesse et la direction passée en argument </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ship</td><td>le vaissau à déplacer </td></tr>
+    <tr><td class="paramname">direction</td><td>la direction du déplacement </td></tr>
+    <tr><td class="paramname">width</td><td>la largeur de l'ecran </td></tr>
+    <tr><td class="paramname">height</td><td>la longueur de l'ecran </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4c9d7b0d0c0b3ce22ceb159bff17f7ef" name="a4c9d7b0d0c0b3ce22ceb159bff17f7ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c9d7b0d0c0b3ce22ceb159bff17f7ef">&#9670;&nbsp;</a></span>player_fire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structBullet.html">Bullet</a> * player_fire </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enlève une balle du vaissau et la renvoie. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ship</td><td>Le vaissau sensé tirer la balle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Bullet* la balle tirée </dd></dl>
+
+</div>
+</div>
+<a id="a480978842e6e0fc1a0af4721149fc039" name="a480978842e6e0fc1a0af4721149fc039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a480978842e6e0fc1a0af4721149fc039">&#9670;&nbsp;</a></span>player_reload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void player_reload </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>recharge les balles du vaissau </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ship</td><td>le vaissau à recharger </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac73c82a96d7068f50aae1e51c061bca2" name="ac73c82a96d7068f50aae1e51c061bca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac73c82a96d7068f50aae1e51c061bca2">&#9670;&nbsp;</a></span>take_damage_from_bullet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void take_damage_from_bullet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structShip.html">Ship</a> *&#160;</td>
+          <td class="paramname"><em>ship</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structBullet.html">Bullet</a> *&#160;</td>
+          <td class="paramname"><em>bullet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Décremente les pv du vaissau de la valeur de damage de la balle. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ship</td><td>Le vaissau touché par la balle </td></tr>
+    <tr><td class="paramname">bullet</td><td>La balle touchant le vaissau </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>
