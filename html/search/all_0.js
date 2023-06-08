@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['_5fanimation_0',['_animation',['../struct__animation.html',1,'']]],
-  ['_5fbullet_5fwith_5fimage_1',['_bullet_with_image',['../struct__bullet__with__image.html',1,'']]],
-  ['_5fimage_5fand_5fpos_2',['_image_and_pos',['../struct__image__and__pos.html',1,'']]]
+  ['_3cp_20style_3d_22color_3a_20lightslategrey_22_3e_3cp_20style_3d_22color_3a_20lightblue_22_3eahmed_20soussi_2c_20enzo_20greneche_3c_2fp_3e_0',['&lt;p style=&quot;color: lightslategrey&quot;&gt;&lt;p style=&quot;color: lightblue&quot;&gt;Ahmed Soussi, Enzo Greneche&lt;/p&gt;',['../md_rapport.html',1,'']]]
 ];

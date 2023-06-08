@@ -1,64 +1,63 @@
-### Ahmed Soussi, Enzo Greneche
+### <p style="color: lightslategrey"><p style="color: lightblue">Ahmed Soussi, Enzo Greneche</p>
 
 # Rapport : Shooting Odissey
 
+## <p style="color: lightblue">Sommaire</p>
+
+### <p style="color: lightslategrey">Introduction</p>
+- #### Objectifs du projet
+### <p style="color: lightslategrey">Conception du jeu</p>
+- #### Présentation du jeu
+- #### Conception de l'interface graphique
+### <p style="color: lightslategrey">Implémentation</p>
+- #### Organisation du code source
+- #### Développement des fonctionnalités principales
+- #### Gestion des interactions utilisateur
+- #### Gestion des événements graphiques
+### <p style="color: lightslategrey">Documentation technique</p>
+- #### Guide d'installation
+- #### Guide d'utilisation
+- #### Documentation du code source
+### <p style="color: lightslategrey">Conclusion</p>
+- #### Bilan du projet
+- #### Perspectives d'amélioration
+- #### Remerciements
+
 ---
-## Sommaire
+## <p style="color: lightblue">Introduction</p>
 
-### Introduction:
-1. #### Objectifs du projet
-### Conception du jeu:
-1. #### Présentation du jeu
-2. #### Conception de l'interface graphique
-### Implémentation:
-1. #### Organisation du code source
-2. #### Développement des fonctionnalités principales
-3. #### Gestion des interactions utilisateur
-4. #### Gestion des événements graphiques
-### Documentation technique:
-1. #### Guide d'installation
-2. #### Guide d'utilisation
-3. #### Documentation du code source
-### Conclusion:
-1. #### Bilan du projet
-2. #### Perspectives d'amélioration
-3. #### Remerciements
+### <p style="color: lightslategrey">Objectifs du projet</p>
 
----
-## Introduction
-
-### Objectifs du projet
-
-L'objectif de ce projet est de développer une application graphique d'un jeu d'avion de type **Shoot'em up** (descendez-les tous)<br>
+L'objectif de ce projet est de **développer une application graphique d'un jeu d'avion de type **Shoot'em up** (descendez-les tous)**<br>
 en temps réel et donc en gérant le taux de rafraîchissement de l'écran **F.P.S.** (Frames per second).<br>
 
 ---
-## Conception du jeu
+## <p style="color: lightblue">Conception du jeu</p>
 
-### Présentation du jeu
+### <p style="color: lightslategrey">Présentation du jeu</p>
 
-Le jeu est en 2d et se déroule dans l'espace. Le joueur contrôle un vaisseau spatial qui peut se déplacer dans toutes les directions.<br>
+Le jeu est en **2d** et se déroule dans **l'espace**. Le joueur contrôle un vaisseau spatial qui peut se déplacer dans **toutes les directions**.<br>
 Il doit éviter ennemis et leurs tirs tout en les détruisant.<br>
 Le jeu se termine lorsque le joueur n'a plus de vie ou lorsque le joueur a détruit tous les ennemis.<br>
 
-### Conception de l'interface graphique
+### <p style="color: lightslategrey">Conception de l'interface graphique</p>
 
 L'interface graphique est composée de plusieurs éléments :<br>
-- Un fond d'écran qui représente l'espace et qui défile de bas en haut.<br>
-- Un vaisseau spatial qui peut se déplacer dans toutes les directions.<br>
-- Des ennemis qui apparaissent selon un fichier en haut de l'écran et qui se déplacent de haut en bas.<br>
-- Des tirs qui sont lancés par le vaisseau et les ennemis.<br>
+- Un **fond d'écran** qui représente l'espace et qui défile de bas en haut.<br>
+- Un **vaisseau spatial** qui peut se déplacer dans toutes les directions.<br>
+- Des **ennemis** qui apparaissent selon un fichier en haut de l'écran et qui se déplacent de haut en bas.<br>
+- Des **tirs** qui sont lancés par le vaisseau et les ennemis.<br>
 
 ---
-## Implémentation
+## <p style="color: lightblue">Implémentation</p>
 
-### Organisation du code source
+### <p style="color: lightslategrey">Organisation du code source</p>
 
 Pour ce projet, nous avons utilisé des fichiers de type '.h' pour déclarer et documenter des fonctions et des structures dans un dossier include<br>
 et des fichiers de type '.c' pour implémenter les fonctions et les structures dans un dossier src.<br>
 On a également utilisé un dossier data pour stocker les images et les sons utilisés dans le jeu.<br>
 
-### Développement des fonctionnalités principales
+### <p style="color: lightslategrey">Développement des fonctionnalités principales</p>
 
 - le création du vaisseau
 - la création des ennemis
@@ -71,9 +70,9 @@ On a également utilisé un dossier data pour stocker les images et les sons uti
 - creation menu et score
 
 ---
-## Documentation technique
+## <p style="color: lightblue">Documentation technique</p>
 
-### Guide d'installation
+### <p style="color: lightslategrey">Guide d'installation
 
 Pour installer le jeu, il faut d'abord cloner le dépôt git sur votre machine en utilisant la commande suivante :<br>
 ```bash
@@ -88,7 +87,7 @@ Et enfin, il faut exécuter le fichier exécutable en utilisant la commande suiv
 ./main
 ```
 
-### Guide d'utilisation
+### <p style="color: lightslategrey">Guide d'utilisation
 
 Pour jouer, il faut utiliser les touches suivantes :<br>
 - **Z** pour se déplacer vers le haut.<br>
@@ -98,28 +97,28 @@ Pour jouer, il faut utiliser les touches suivantes :<br>
 - **Espace** pour tirer.<br>
 - **Echap** pour mettre le jeu en pause.<br>
 
-### Documentation du code source
+### <p style="color: lightslategrey">Documentation du code source
 
 La documentation du code source est disponible en ouvrant le fichier [doc.html](doc.html) à la source du projet avec un navigateur web.<br>
 
 ---
-## Conclusion
+## <p style="color: lightblue">Conclusion</p>
 
-### Bilan du projet
+### <p style="color: lightslategrey">Bilan du projet
 
 Pour conclure, ce projet nous a permis de mettre en pratique les connaissances acquises en cours de programmation en C.<br>
 Autres competence acquises :<br>
 - Utilisation de la libMLV pour la création d'une interface graphique et la gestion des événements.<br>
 
-### Perspectives d'amélioration
+### <p style="color: lightslategrey">Perspectives d'amélioration
 
 Pour améliorer le jeu, on peut ajouter les fonctionnalités suivantes :<br>
 - Ajouter un Boss à la fin du niveau
 - Ajouter des bonus
 - Ajouter des niveaux
 
-### Remerciements
+### <p style="color: lightslategrey">Remerciements
 
-Nous tenons à remercier notre professeur de programmation en C, M. Borie, pour son aide et ses conseils.<br>
+Nous tenons à remercier notre professeur de programmation en C, **M. Borie**, pour son aide et ses conseils.<br>
 
 ---
