@@ -60,9 +60,15 @@ On a également utilisé un dossier data pour stocker les images et les sons uti
 
 ### Développement des fonctionnalités principales
 
-### Gestion des interactions utilisateur
-
-### Gestion des événements graphiques
+- le création du vaisseau
+- la création des ennemis
+- les mouvements du vaisseau
+- les mouvements des ennemis
+- création des tirs
+- mouvement des tirs avec des angles
+- création d'animations (reload et explosion)
+- gestion des collisions (vaisseau-ennemis, vaisseau-tirs, ennemis-tirs)
+- creation menu et score
 
 ---
 ## Documentation technique
@@ -94,7 +100,7 @@ Pour jouer, il faut utiliser les touches suivantes :<br>
 
 ### Documentation du code source
 
-La documentation du code source est disponible en ouvrant le fichier **doc.html** à la source du projet avec un navigateur web.<br>
+La documentation du code source est disponible en ouvrant le fichier [doc.html](doc.html) à la source du projet avec un navigateur web.<br>
 
 ---
 ## Conclusion
@@ -102,6 +108,8 @@ La documentation du code source est disponible en ouvrant le fichier **doc.html*
 ### Bilan du projet
 
 Pour conclure, ce projet nous a permis de mettre en pratique les connaissances acquises en cours de programmation en C.<br>
+Autres competence acquises :<br>
+- Utilisation de la libMLV pour la création d'une interface graphique et la gestion des événements.<br>
 
 ### Perspectives d'amélioration
 
